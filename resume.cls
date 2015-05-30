@@ -1,6 +1,12 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{resume}[2015/05/25 An elegant Résumé class]
 \LoadClass[11pt]{article}
+
+% disable indent globally
+\setlength{\parindent}{0pt} 
+% some general improvements, defines the XeTeX logo
+\RequirePackage{xltxtra}                
+
 \RequirePackage[
 	a4paper,
 	left=0.75in,
@@ -9,6 +15,7 @@
 	bottom=0.55in,
 	nohead
 ]{geometry}
+
 \RequirePackage{titlesec}
 \RequirePackage{enumitem}
 \setlist{noitemsep} % removes spacing from items but leaves space around the whole list
@@ -16,6 +23,7 @@
 \setlist[itemize]{topsep=0.25em, leftmargin=1.5pc}
 \setlist[enumerate]{topsep=0.25em, leftmargin=1.5pc}
 \RequirePackage{fontawesome}
+\RequirePackage[super]{nth}
 
 \titleformat{\section}         % Customise the \section command 
   {\Large\scshape\raggedright} % Make the \section headers large (\Large),
@@ -38,16 +46,17 @@
   \subsection[#1]{#1 \hfill #2}%
 }
 \newcommand{\datedline}[2]{%
-  {#1 \hfill #2 \\}%
+  {\par #1 \hfill #2 \par}%
 }
 
 \newcommand{\name}[1]{
   \centerline{\Huge{#1}}
-  \vspace{0.25em}
+  \vspace{1.25ex}
 }
 \newcommand{\contact}[3]{
   \centerline{{\faEnvelope\ \large{#1}} {\large\textperiodcentered} {\faMobilePhone\ \large{#2}} {\large\textperiodcentered} {\faLink\ \large{#3}}}
+  \vspace{1.5ex}
 }
 \newcommand{\role}[2]{
-  {\textit{#1} ~ #2 \\}
+  {\par \textit{#1} ~ #2 \par}
 }
