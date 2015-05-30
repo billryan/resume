@@ -1,0 +1,369 @@
+%% start of file `fontawesome.sty'.
+%% Copyright 2013 Xavier Danaux (xdanaux@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+
+%-------------------------------------------------------------------------------
+%                identification
+%-------------------------------------------------------------------------------
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{fontawesome}[2013/05/10 v3.1.1 font awesome icons]
+
+
+%-------------------------------------------------------------------------------
+%                requirements
+%-------------------------------------------------------------------------------
+\RequirePackage{fontspec}
+
+
+%-------------------------------------------------------------------------------
+%                implementation
+%-------------------------------------------------------------------------------
+
+% definition of \FA as a shortcut to load the Font Awesome font
+\defaultfontfeatures{Path = fonts/}
+\newfontfamily{\FA}{FontAwesome}
+
+% generic command to display an icon by its name
+\newcommand*{\faicon}[1]{%
+  {\FA\csname faicon@#1\endcsname}}
+
+% icon-specific commands
+\expandafter\def\csname faicon@glass\endcsname              {\symbol{"F000}}  \def\faGlass             {{\FA\csname faicon@glass\endcsname}}
+\expandafter\def\csname faicon@music\endcsname              {\symbol{"F001}}  \def\faMusic             {{\FA\csname faicon@music\endcsname}}
+\expandafter\def\csname faicon@search\endcsname             {\symbol{"F002}}  \def\faSearch            {{\FA\csname faicon@search\endcsname}}
+\expandafter\def\csname faicon@envelope\endcsname           {\symbol{"F003}}  \def\faEnvelope          {{\FA\csname faicon@envelope\endcsname}}
+\expandafter\def\csname faicon@heart\endcsname              {\symbol{"F004}}  \def\faHeart             {{\FA\csname faicon@heart\endcsname}}
+\expandafter\def\csname faicon@star\endcsname               {\symbol{"F005}}  \def\faStar              {{\FA\csname faicon@star\endcsname}}
+\expandafter\def\csname faicon@star-empty\endcsname         {\symbol{"F006}}  \def\faStarEmpty         {{\FA\csname faicon@star-empty\endcsname}}
+\expandafter\def\csname faicon@user\endcsname               {\symbol{"F007}}  \def\faUser              {{\FA\csname faicon@user\endcsname}}
+\expandafter\def\csname faicon@film\endcsname               {\symbol{"F008}}  \def\faFilm              {{\FA\csname faicon@film\endcsname}}
+\expandafter\def\csname faicon@thumbnails-large\endcsname   {\symbol{"F009}}  \def\faThumbnailsLarge   {{\FA\csname faicon@thumbnails-large\endcsname}}
+\expandafter\def\csname faicon@thumbnails\endcsname         {\symbol{"F00A}}  \def\faThumbnails        {{\FA\csname faicon@thumbnails\endcsname}}
+\expandafter\def\csname faicon@thumbnails-list\endcsname    {\symbol{"F00B}}  \def\faThumbnailsList    {{\FA\csname faicon@thumbnails-list\endcsname}}
+\expandafter\def\csname faicon@ok\endcsname                 {\symbol{"F00C}}  \def\faOk                {{\FA\csname faicon@ok\endcsname}}
+\expandafter\def\csname faicon@remove\endcsname             {\symbol{"F00D}}  \def\faRemove            {{\FA\csname faicon@remove\endcsname}}
+\expandafter\def\csname faicon@zoom-in\endcsname            {\symbol{"F00E}}  \def\faZoomIn            {{\FA\csname faicon@zoom-in\endcsname}}
+
+\expandafter\def\csname faicon@zoom-out\endcsname           {\symbol{"F010}}  \def\faZoomOut           {{\FA\csname faicon@zoom-out\endcsname}}
+\expandafter\def\csname faicon@off\endcsname                {\symbol{"F011}}  \def\faOff               {{\FA\csname faicon@off\endcsname}}
+\expandafter\def\csname faicon@signal\endcsname             {\symbol{"F012}}  \def\faSignal            {{\FA\csname faicon@signal\endcsname}}
+\expandafter\def\csname faicon@cog\endcsname                {\symbol{"F013}}  \def\faCog               {{\FA\csname faicon@cog\endcsname}}
+\expandafter\def\csname faicon@trash\endcsname              {\symbol{"F014}}  \def\faTrash             {{\FA\csname faicon@trash\endcsname}}
+\expandafter\def\csname faicon@home\endcsname               {\symbol{"F015}}  \def\faHome              {{\FA\csname faicon@home\endcsname}}
+\expandafter\def\csname faicon@file\endcsname               {\symbol{"F016}}  \def\faFile              {{\FA\csname faicon@file\endcsname}}
+\expandafter\def\csname faicon@time\endcsname               {\symbol{"F017}}  \def\faTime              {{\FA\csname faicon@time\endcsname}}
+\expandafter\def\csname faicon@road\endcsname               {\symbol{"F018}}  \def\faRoad              {{\FA\csname faicon@road\endcsname}}
+\expandafter\def\csname faicon@download-alt\endcsname       {\symbol{"F019}}  \def\faDownloadAlt       {{\FA\csname faicon@download-alt\endcsname}}
+\expandafter\def\csname faicon@download\endcsname           {\symbol{"F01A}}  \def\faDownload          {{\FA\csname faicon@download\endcsname}}
+\expandafter\def\csname faicon@upload\endcsname             {\symbol{"F01B}}  \def\faUpload            {{\FA\csname faicon@upload\endcsname}}
+\expandafter\def\csname faicon@inbox\endcsname              {\symbol{"F01C}}  \def\faInbox             {{\FA\csname faicon@inbox\endcsname}}
+\expandafter\def\csname faicon@play-circle\endcsname        {\symbol{"F01D}}  \def\faPlayCircle        {{\FA\csname faicon@play-circle\endcsname}}
+\expandafter\def\csname faicon@repeat\endcsname             {\symbol{"F01E}}  \def\faRepeat            {{\FA\csname faicon@repeat\endcsname}}
+
+\expandafter\def\csname faicon@refresh\endcsname            {\symbol{"F021}}  \def\faRefresh           {{\FA\csname faicon@refresh\endcsname}}
+\expandafter\def\csname faicon@list-alt\endcsname           {\symbol{"F022}}  \def\faListAlt           {{\FA\csname faicon@list-alt\endcsname}}
+\expandafter\def\csname faicon@lock\endcsname               {\symbol{"F023}}  \def\faLock              {{\FA\csname faicon@lock\endcsname}}
+\expandafter\def\csname faicon@flag\endcsname               {\symbol{"F024}}  \def\faFlag              {{\FA\csname faicon@flag\endcsname}}
+\expandafter\def\csname faicon@headphones\endcsname         {\symbol{"F025}}  \def\faHeadphones        {{\FA\csname faicon@headphones\endcsname}}
+\expandafter\def\csname faicon@volume-off\endcsname         {\symbol{"F026}}  \def\faVolumeOff         {{\FA\csname faicon@volume-off\endcsname}}
+\expandafter\def\csname faicon@volume-down\endcsname        {\symbol{"F027}}  \def\faVolumeDown        {{\FA\csname faicon@volume-down\endcsname}}
+\expandafter\def\csname faicon@volume-up\endcsname          {\symbol{"F028}}  \def\faVolumeUp          {{\FA\csname faicon@volume-up\endcsname}}
+\expandafter\def\csname faicon@qrcode\endcsname             {\symbol{"F029}}  \def\faQRcode            {{\FA\csname faicon@qrcode\endcsname}}
+\expandafter\def\csname faicon@barcode\endcsname            {\symbol{"F02A}}  \def\faBarcode           {{\FA\csname faicon@barcode\endcsname}}
+\expandafter\def\csname faicon@tag\endcsname                {\symbol{"F02B}}  \def\faTag               {{\FA\csname faicon@tag\endcsname}}
+\expandafter\def\csname faicon@tags\endcsname               {\symbol{"F02C}}  \def\faTags              {{\FA\csname faicon@tags\endcsname}}
+\expandafter\def\csname faicon@book\endcsname               {\symbol{"F02D}}  \def\faBook              {{\FA\csname faicon@book\endcsname}}
+\expandafter\def\csname faicon@bookmark\endcsname           {\symbol{"F02E}}  \def\faBookmark          {{\FA\csname faicon@bookmark\endcsname}}
+\expandafter\def\csname faicon@print\endcsname              {\symbol{"F02F}}  \def\faPrint             {{\FA\csname faicon@print\endcsname}}
+
+\expandafter\def\csname faicon@camera\endcsname             {\symbol{"F030}}  \def\faCamera            {{\FA\csname faicon@camera\endcsname}}
+\expandafter\def\csname faicon@font\endcsname               {\symbol{"F031}}  \def\faFont              {{\FA\csname faicon@font\endcsname}}
+\expandafter\def\csname faicon@bold\endcsname               {\symbol{"F032}}  \def\faBold              {{\FA\csname faicon@bold\endcsname}}
+\expandafter\def\csname faicon@italic\endcsname             {\symbol{"F033}}  \def\faItalic            {{\FA\csname faicon@italic\endcsname}}
+\expandafter\def\csname faicon@text-height\endcsname        {\symbol{"F034}}  \def\faTextHeight        {{\FA\csname faicon@text-height\endcsname}}
+\expandafter\def\csname faicon@text-width\endcsname         {\symbol{"F035}}  \def\faTextWidth         {{\FA\csname faicon@text-width\endcsname}}
+\expandafter\def\csname faicon@align-left\endcsname         {\symbol{"F036}}  \def\faAlignLeft         {{\FA\csname faicon@align-left\endcsname}}
+\expandafter\def\csname faicon@align-center\endcsname       {\symbol{"F037}}  \def\faAlignCenter       {{\FA\csname faicon@align-center\endcsname}}
+\expandafter\def\csname faicon@align-right\endcsname        {\symbol{"F038}}  \def\faAlignRight        {{\FA\csname faicon@align-right\endcsname}}
+\expandafter\def\csname faicon@align-justify\endcsname      {\symbol{"F039}}  \def\faAlignJustify      {{\FA\csname faicon@align-justify\endcsname}}
+\expandafter\def\csname faicon@list\endcsname               {\symbol{"F03A}}  \def\faList              {{\FA\csname faicon@list\endcsname}}
+\expandafter\def\csname faicon@indent-left\endcsname        {\symbol{"F03B}}  \def\faIndentLeft        {{\FA\csname faicon@indent-left\endcsname}}
+\expandafter\def\csname faicon@indent-right\endcsname       {\symbol{"F03C}}  \def\faIndentRight       {{\FA\csname faicon@indent-right\endcsname}}
+\expandafter\def\csname faicon@facetime-video\endcsname     {\symbol{"F03D}}  \def\faFacetimeVideo     {{\FA\csname faicon@facetime-video\endcsname}}
+\expandafter\def\csname faicon@picture\endcsname            {\symbol{"F03E}}  \def\faPicture           {{\FA\csname faicon@picture\endcsname}}
+
+\expandafter\def\csname faicon@pencil\endcsname             {\symbol{"F040}}  \def\faPencil            {{\FA\csname faicon@pencil\endcsname}}
+\expandafter\def\csname faicon@map-marker\endcsname         {\symbol{"F041}}  \def\faMapMarker         {{\FA\csname faicon@map-marker\endcsname}}
+\expandafter\def\csname faicon@adjust\endcsname             {\symbol{"F042}}  \def\faAdjust            {{\FA\csname faicon@adjust\endcsname}}
+\expandafter\def\csname faicon@tint\endcsname               {\symbol{"F043}}  \def\faTint              {{\FA\csname faicon@tint\endcsname}}
+\expandafter\def\csname faicon@edit\endcsname               {\symbol{"F044}}  \def\faEdit              {{\FA\csname faicon@edit\endcsname}}
+\expandafter\def\csname faicon@share\endcsname              {\symbol{"F045}}  \def\faShare             {{\FA\csname faicon@share\endcsname}}
+\expandafter\def\csname faicon@check\endcsname              {\symbol{"F046}}  \def\faCheck             {{\FA\csname faicon@check\endcsname}}
+\expandafter\def\csname faicon@move\endcsname               {\symbol{"F047}}  \def\faMove              {{\FA\csname faicon@move\endcsname}}
+\expandafter\def\csname faicon@step-backward\endcsname      {\symbol{"F048}}  \def\faStepBackward      {{\FA\csname faicon@step-backward\endcsname}}
+\expandafter\def\csname faicon@fast-backward\endcsname      {\symbol{"F049}}  \def\faFastBackward      {{\FA\csname faicon@fast-backward\endcsname}}
+\expandafter\def\csname faicon@backward\endcsname           {\symbol{"F04A}}  \def\faBackward          {{\FA\csname faicon@backward\endcsname}}
+\expandafter\def\csname faicon@play\endcsname               {\symbol{"F04B}}  \def\faPlay              {{\FA\csname faicon@play\endcsname}}
+\expandafter\def\csname faicon@pause\endcsname              {\symbol{"F04C}}  \def\faPause             {{\FA\csname faicon@pause\endcsname}}
+\expandafter\def\csname faicon@stop\endcsname               {\symbol{"F04D}}  \def\faStop              {{\FA\csname faicon@stop\endcsname}}
+\expandafter\def\csname faicon@forward\endcsname            {\symbol{"F04E}}  \def\faForward           {{\FA\csname faicon@forward\endcsname}}
+
+\expandafter\def\csname faicon@fast-forward\endcsname       {\symbol{"F050}}  \def\faFastForward       {{\FA\csname faicon@fast-forward\endcsname}}
+\expandafter\def\csname faicon@step-forward\endcsname       {\symbol{"F051}}  \def\faStepForward       {{\FA\csname faicon@step-forward\endcsname}}
+\expandafter\def\csname faicon@eject\endcsname              {\symbol{"F052}}  \def\faEject             {{\FA\csname faicon@eject\endcsname}}
+\expandafter\def\csname faicon@chevron-left\endcsname       {\symbol{"F053}}  \def\faChevronLeft       {{\FA\csname faicon@chevron-left\endcsname}}
+\expandafter\def\csname faicon@chevron-right\endcsname      {\symbol{"F054}}  \def\faChevronRight      {{\FA\csname faicon@chevron-right\endcsname}}
+\expandafter\def\csname faicon@plus-sign\endcsname          {\symbol{"F055}}  \def\faPlusSign          {{\FA\csname faicon@plus-sign\endcsname}}
+\expandafter\def\csname faicon@minus-sign\endcsname         {\symbol{"F056}}  \def\faMinusSign         {{\FA\csname faicon@minus-sign\endcsname}}
+\expandafter\def\csname faicon@remove-sign\endcsname        {\symbol{"F057}}  \def\faRemoveSign        {{\FA\csname faicon@remove-sign\endcsname}}
+\expandafter\def\csname faicon@ok-sign\endcsname            {\symbol{"F058}}  \def\faOkSign            {{\FA\csname faicon@ok-sign\endcsname}}
+\expandafter\def\csname faicon@question-sign\endcsname      {\symbol{"F059}}  \def\faQuestionSign      {{\FA\csname faicon@question-sign\endcsname}}
+\expandafter\def\csname faicon@info-sign\endcsname          {\symbol{"F05A}}  \def\faInfoSign          {{\FA\csname faicon@info-sign\endcsname}}
+\expandafter\def\csname faicon@screenshot\endcsname         {\symbol{"F05B}}  \def\faScreenshot        {{\FA\csname faicon@screenshot\endcsname}}
+\expandafter\def\csname faicon@remove-circle\endcsname      {\symbol{"F05C}}  \def\faRemoveCircle      {{\FA\csname faicon@remove-circle\endcsname}}
+\expandafter\def\csname faicon@ok-circle\endcsname          {\symbol{"F05D}}  \def\faOkCircle          {{\FA\csname faicon@ok-circle\endcsname}}
+\expandafter\def\csname faicon@ban-circle\endcsname         {\symbol{"F05E}}  \def\faBanCircle         {{\FA\csname faicon@ban-circle\endcsname}}
+
+\expandafter\def\csname faicon@arrow-left\endcsname         {\symbol{"F060}}  \def\faArrowLeft         {{\FA\csname faicon@arrow-left\endcsname}}
+\expandafter\def\csname faicon@arrow-right\endcsname        {\symbol{"F061}}  \def\faArrowRight        {{\FA\csname faicon@arrow-right\endcsname}}
+\expandafter\def\csname faicon@arrow-up\endcsname           {\symbol{"F062}}  \def\faArrowUp           {{\FA\csname faicon@arrow-up\endcsname}}
+\expandafter\def\csname faicon@arrow-down\endcsname         {\symbol{"F063}}  \def\faArrowDown         {{\FA\csname faicon@arrow-down\endcsname}}
+\expandafter\def\csname faicon@share-alt\endcsname          {\symbol{"F064}}  \def\faShareAlt          {{\FA\csname faicon@share-alt\endcsname}}
+\expandafter\def\csname faicon@resize-full\endcsname        {\symbol{"F065}}  \def\faResizeFull        {{\FA\csname faicon@resize-full\endcsname}}
+\expandafter\def\csname faicon@resize-small\endcsname       {\symbol{"F066}}  \def\faResizeSmall       {{\FA\csname faicon@resize-small\endcsname}}
+\expandafter\def\csname faicon@plus\endcsname               {\symbol{"F067}}  \def\faPlus              {{\FA\csname faicon@plus\endcsname}}
+\expandafter\def\csname faicon@minus\endcsname              {\symbol{"F068}}  \def\faMinus             {{\FA\csname faicon@minus\endcsname}}
+\expandafter\def\csname faicon@asterisk\endcsname           {\symbol{"F069}}  \def\faAsterisk          {{\FA\csname faicon@asterisk\endcsname}}
+\expandafter\def\csname faicon@exclamation-sign\endcsname   {\symbol{"F06A}}  \def\faExclamationSign   {{\FA\csname faicon@exclamation-sign\endcsname}}
+\expandafter\def\csname faicon@gift\endcsname               {\symbol{"F06B}}  \def\faGift              {{\FA\csname faicon@gift\endcsname}}
+\expandafter\def\csname faicon@leaf\endcsname               {\symbol{"F06C}}  \def\faLeaf              {{\FA\csname faicon@leaf\endcsname}}
+\expandafter\def\csname faicon@fire\endcsname               {\symbol{"F06D}}  \def\faFire              {{\FA\csname faicon@fire\endcsname}}
+\expandafter\def\csname faicon@eye-open\endcsname           {\symbol{"F06E}}  \def\faEyeOpen           {{\FA\csname faicon@eye-open\endcsname}}
+
+\expandafter\def\csname faicon@eye-close\endcsname          {\symbol{"F070}}  \def\faEyeClose          {{\FA\csname faicon@eye-close\endcsname}}
+\expandafter\def\csname faicon@warning-sign\endcsname       {\symbol{"F071}}  \def\faWarningSign       {{\FA\csname faicon@warning-sign\endcsname}}
+\expandafter\def\csname faicon@plane\endcsname              {\symbol{"F072}}  \def\faPlane             {{\FA\csname faicon@plane\endcsname}}
+\expandafter\def\csname faicon@calendar\endcsname           {\symbol{"F073}}  \def\faCalendar          {{\FA\csname faicon@calendar\endcsname}}
+\expandafter\def\csname faicon@random\endcsname             {\symbol{"F074}}  \def\faRandom            {{\FA\csname faicon@random\endcsname}}
+\expandafter\def\csname faicon@comment\endcsname            {\symbol{"F075}}  \def\faComment           {{\FA\csname faicon@comment\endcsname}}
+\expandafter\def\csname faicon@magnet\endcsname             {\symbol{"F076}}  \def\faMagnet            {{\FA\csname faicon@magnet\endcsname}}
+\expandafter\def\csname faicon@chevron-up\endcsname         {\symbol{"F077}}  \def\faChevronUp         {{\FA\csname faicon@chevron-up\endcsname}}
+\expandafter\def\csname faicon@chevron-down\endcsname       {\symbol{"F078}}  \def\faChevronDown       {{\FA\csname faicon@chevron-down\endcsname}}
+\expandafter\def\csname faicon@retweet\endcsname            {\symbol{"F079}}  \def\faRetweet           {{\FA\csname faicon@retweet\endcsname}}
+\expandafter\def\csname faicon@shopping-cart\endcsname      {\symbol{"F07A}}  \def\faShoppingCart      {{\FA\csname faicon@shopping-cart\endcsname}}
+\expandafter\def\csname faicon@folder-close\endcsname       {\symbol{"F07B}}  \def\faFolderClose       {{\FA\csname faicon@folder-close\endcsname}}
+\expandafter\def\csname faicon@folder-open\endcsname        {\symbol{"F07C}}  \def\faFolderOpen        {{\FA\csname faicon@folder-open\endcsname}}
+\expandafter\def\csname faicon@resize-vertical\endcsname    {\symbol{"F07D}}  \def\faResizeVertical    {{\FA\csname faicon@resize-vertical\endcsname}}  
+\expandafter\def\csname faicon@resize-horizontal\endcsname  {\symbol{"F07E}}  \def\faResizeHorizontal  {{\FA\csname faicon@resize-horizontal\endcsname}}
+
+\expandafter\def\csname faicon@bar-chart\endcsname          {\symbol{"F080}}  \def\faBarChart          {{\FA\csname faicon@bar-chart\endcsname}}
+\expandafter\def\csname faicon@twitter-sign\endcsname       {\symbol{"F081}}  \def\faTwitterSign       {{\FA\csname faicon@twitter-sign\endcsname}}
+\expandafter\def\csname faicon@facebook-sign\endcsname      {\symbol{"F082}}  \def\faFacebookSign      {{\FA\csname faicon@facebook-sign\endcsname}}
+\expandafter\def\csname faicon@camera-retro\endcsname       {\symbol{"F083}}  \def\faCameraRetro       {{\FA\csname faicon@camera-retro\endcsname}}
+\expandafter\def\csname faicon@key\endcsname                {\symbol{"F084}}  \def\faKey               {{\FA\csname faicon@key\endcsname}}
+\expandafter\def\csname faicon@cogs\endcsname               {\symbol{"F085}}  \def\faCogs              {{\FA\csname faicon@cogs\endcsname}}
+\expandafter\def\csname faicon@comments\endcsname           {\symbol{"F086}}  \def\faComments          {{\FA\csname faicon@comments\endcsname}}
+\expandafter\def\csname faicon@thumbs-up\endcsname          {\symbol{"F087}}  \def\faThumbsUp          {{\FA\csname faicon@thumbs-up\endcsname}}
+\expandafter\def\csname faicon@thumbs-down\endcsname        {\symbol{"F088}}  \def\faThumbsDown        {{\FA\csname faicon@thumbs-down\endcsname}}
+\expandafter\def\csname faicon@star-half\endcsname          {\symbol{"F089}}  \def\faStarHalf          {{\FA\csname faicon@star-half\endcsname}}
+\expandafter\def\csname faicon@heart-empty\endcsname        {\symbol{"F08A}}  \def\faHeartEmpty        {{\FA\csname faicon@heart-empty\endcsname}}
+\expandafter\def\csname faicon@signout\endcsname            {\symbol{"F08B}}  \def\faSignout           {{\FA\csname faicon@signout\endcsname}}
+\expandafter\def\csname faicon@linkedin-sign\endcsname      {\symbol{"F08C}}  \def\faLinkedinSign      {{\FA\csname faicon@linkedin-sign\endcsname}}
+\expandafter\def\csname faicon@pushpin\endcsname            {\symbol{"F08D}}  \def\faPushpin           {{\FA\csname faicon@pushpin\endcsname}}
+\expandafter\def\csname faicon@external-link\endcsname      {\symbol{"F08E}}  \def\faExternalLink      {{\FA\csname faicon@external-link\endcsname}}
+
+\expandafter\def\csname faicon@signin\endcsname             {\symbol{"F090}}  \def\faSignin            {{\FA\csname faicon@signin\endcsname}}
+\expandafter\def\csname faicon@trophy\endcsname             {\symbol{"F091}}  \def\faTrophy            {{\FA\csname faicon@trophy\endcsname}}
+\expandafter\def\csname faicon@github-sign\endcsname        {\symbol{"F092}}  \def\faGithubSign        {{\FA\csname faicon@github-sign\endcsname}}
+\expandafter\def\csname faicon@upload-alt\endcsname         {\symbol{"F093}}  \def\faUploadAlt         {{\FA\csname faicon@upload-alt\endcsname}}
+\expandafter\def\csname faicon@lemon\endcsname              {\symbol{"F094}}  \def\faLemon             {{\FA\csname faicon@lemon\endcsname}}
+\expandafter\def\csname faicon@phone\endcsname              {\symbol{"F095}}  \def\faPhone             {{\FA\csname faicon@phone\endcsname}}
+\expandafter\def\csname faicon@check-empty\endcsname        {\symbol{"F096}}  \def\faCheckEmpty        {{\FA\csname faicon@check-empty\endcsname}}
+\expandafter\def\csname faicon@bookmark-empty\endcsname     {\symbol{"F097}}  \def\faBookmarkEmpty     {{\FA\csname faicon@bookmark-empty\endcsname}}
+\expandafter\def\csname faicon@phone-sign\endcsname         {\symbol{"F098}}  \def\faPhoneSign         {{\FA\csname faicon@phone-sign\endcsname}}
+\expandafter\def\csname faicon@twitter\endcsname            {\symbol{"F099}}  \def\faTwitter           {{\FA\csname faicon@twitter\endcsname}}
+\expandafter\def\csname faicon@facebook\endcsname           {\symbol{"F09A}}  \def\faFacebook          {{\FA\csname faicon@facebook\endcsname}}
+\expandafter\def\csname faicon@github\endcsname             {\symbol{"F09B}}  \def\faGithub            {{\FA\csname faicon@github\endcsname}}
+\expandafter\def\csname faicon@unlock\endcsname             {\symbol{"F09C}}  \def\faUnlock            {{\FA\csname faicon@unlock\endcsname}}
+\expandafter\def\csname faicon@credit-card\endcsname        {\symbol{"F09D}}  \def\faCreditCard        {{\FA\csname faicon@credit-card\endcsname}}
+\expandafter\def\csname faicon@rss\endcsname                {\symbol{"F09E}}  \def\faRSS               {{\FA\csname faicon@rss\endcsname}}
+
+\expandafter\def\csname faicon@hdd\endcsname                {\symbol{"F0A0}}  \def\faHDD               {{\FA\csname faicon@hdd\endcsname}}
+\expandafter\def\csname faicon@bullhorn\endcsname           {\symbol{"F0A1}}  \def\faBullhorn          {{\FA\csname faicon@bullhorn\endcsname}}
+\expandafter\def\csname faicon@bell\endcsname               {\symbol{"F0A2}}  \def\faBell              {{\FA\csname faicon@bell\endcsname}}
+\expandafter\def\csname faicon@certificate\endcsname        {\symbol{"F0A3}}  \def\faCertificate       {{\FA\csname faicon@certificate\endcsname}}
+\expandafter\def\csname faicon@hand-left\endcsname          {\symbol{"F0A4}}  \def\faHandLeft          {{\FA\csname faicon@hand-left\endcsname}}
+\expandafter\def\csname faicon@hand-right\endcsname         {\symbol{"F0A5}}  \def\faHandRight         {{\FA\csname faicon@hand-right\endcsname}}
+\expandafter\def\csname faicon@hand-up\endcsname            {\symbol{"F0A6}}  \def\faHandUp            {{\FA\csname faicon@hand-up\endcsname}}
+\expandafter\def\csname faicon@hand-down\endcsname          {\symbol{"F0A7}}  \def\faHandDown          {{\FA\csname faicon@hand-down\endcsname}}
+\expandafter\def\csname faicon@circle-arrow-left\endcsname  {\symbol{"F0A8}}  \def\faCircleArrowLeft   {{\FA\csname faicon@circle-arrow-left\endcsname}}
+\expandafter\def\csname faicon@circle-arrow-right\endcsname {\symbol{"F0A9}}  \def\faCircleArrowRight  {{\FA\csname faicon@circle-arrow-right\endcsname}}
+\expandafter\def\csname faicon@circle-arrow-up\endcsname    {\symbol{"F0AA}}  \def\faCircleArrowUp     {{\FA\csname faicon@circle-arrow-up\endcsname}}
+\expandafter\def\csname faicon@circle-arrow-down\endcsname  {\symbol{"F0AB}}  \def\faCircleArrowDown   {{\FA\csname faicon@circle-arrow-down\endcsname}}
+\expandafter\def\csname faicon@globe\endcsname              {\symbol{"F0AC}}  \def\faGlobe             {{\FA\csname faicon@globe\endcsname}}
+\expandafter\def\csname faicon@wrench\endcsname             {\symbol{"F0AD}}  \def\faWrench            {{\FA\csname faicon@wrench\endcsname}}
+\expandafter\def\csname faicon@tasks\endcsname              {\symbol{"F0AE}}  \def\faTasks             {{\FA\csname faicon@tasks\endcsname}}
+
+\expandafter\def\csname faicon@filter\endcsname             {\symbol{"F0B0}}  \def\faFilter            {{\FA\csname faicon@filter\endcsname}}
+\expandafter\def\csname faicon@briefcase\endcsname          {\symbol{"F0B1}}  \def\faBriefcase         {{\FA\csname faicon@briefcase\endcsname}}
+\expandafter\def\csname faicon@fullscreen\endcsname         {\symbol{"F0B2}}  \def\faFullscreen        {{\FA\csname faicon@fullscreen\endcsname}}
+
+\expandafter\def\csname faicon@group\endcsname              {\symbol{"F0C0}}  \def\faGroup             {{\FA\csname faicon@group\endcsname}}
+\expandafter\def\csname faicon@link\endcsname               {\symbol{"F0C1}}  \def\faLink              {{\FA\csname faicon@link\endcsname}}
+\expandafter\def\csname faicon@cloud\endcsname              {\symbol{"F0C2}}  \def\faCloud             {{\FA\csname faicon@cloud\endcsname}}
+\expandafter\def\csname faicon@beaker\endcsname             {\symbol{"F0C3}}  \def\faBeaker            {{\FA\csname faicon@beaker\endcsname}}
+\expandafter\def\csname faicon@cut\endcsname                {\symbol{"F0C4}}  \def\faCut               {{\FA\csname faicon@cut\endcsname}}
+\expandafter\def\csname faicon@copy\endcsname               {\symbol{"F0C5}}  \def\faCopy              {{\FA\csname faicon@copy\endcsname}}
+\expandafter\def\csname faicon@paper-clip\endcsname         {\symbol{"F0C6}}  \def\faPaperClip         {{\FA\csname faicon@paper-clip\endcsname}}
+\expandafter\def\csname faicon@save\endcsname               {\symbol{"F0C7}}  \def\faSave              {{\FA\csname faicon@save\endcsname}}
+\expandafter\def\csname faicon@sign-blank\endcsname         {\symbol{"F0C8}}  \def\faSignBlank         {{\FA\csname faicon@sign-blank\endcsname}}
+\expandafter\def\csname faicon@reorder\endcsname            {\symbol{"F0C9}}  \def\faReorder           {{\FA\csname faicon@reorder\endcsname}}
+\expandafter\def\csname faicon@list-ul\endcsname            {\symbol{"F0CA}}  \def\faListUL            {{\FA\csname faicon@list-ul\endcsname}}
+\expandafter\def\csname faicon@list-ol\endcsname            {\symbol{"F0CB}}  \def\faListOL            {{\FA\csname faicon@list-ol\endcsname}}
+\expandafter\def\csname faicon@strikethrough\endcsname      {\symbol{"F0CC}}  \def\faStrikethrough     {{\FA\csname faicon@strikethrough\endcsname}}
+\expandafter\def\csname faicon@underline\endcsname          {\symbol{"F0CD}}  \def\faUnderline         {{\FA\csname faicon@underline\endcsname}}
+\expandafter\def\csname faicon@table\endcsname              {\symbol{"F0CE}}  \def\faTable             {{\FA\csname faicon@table\endcsname}}
+
+\expandafter\def\csname faicon@magic\endcsname              {\symbol{"F0D0}}  \def\faMagic             {{\FA\csname faicon@magic\endcsname}}
+\expandafter\def\csname faicon@truck\endcsname              {\symbol{"F0D1}}  \def\faTruck             {{\FA\csname faicon@truck\endcsname}}
+\expandafter\def\csname faicon@pinterest\endcsname          {\symbol{"F0D2}}  \def\faPinterest         {{\FA\csname faicon@pinterest\endcsname}}
+\expandafter\def\csname faicon@pinterest-sign\endcsname     {\symbol{"F0D3}}  \def\faPinterestSign     {{\FA\csname faicon@pinterest-sign\endcsname}}
+\expandafter\def\csname faicon@google-plus-sign\endcsname   {\symbol{"F0D4}}  \def\faGooglePlusSign    {{\FA\csname faicon@google-plus-sign\endcsname}}
+\expandafter\def\csname faicon@google-plus\endcsname        {\symbol{"F0D5}}  \def\faGooglePlus        {{\FA\csname faicon@google-plus\endcsname}}
+\expandafter\def\csname faicon@money\endcsname              {\symbol{"F0D6}}  \def\faMoney             {{\FA\csname faicon@money\endcsname}}
+\expandafter\def\csname faicon@caret-down\endcsname         {\symbol{"F0D7}}  \def\faCaretDown         {{\FA\csname faicon@caret-down\endcsname}}
+\expandafter\def\csname faicon@caret-up\endcsname           {\symbol{"F0D8}}  \def\faCaretUp           {{\FA\csname faicon@caret-up\endcsname}}
+\expandafter\def\csname faicon@caret-left\endcsname         {\symbol{"F0D9}}  \def\faCaretLeft         {{\FA\csname faicon@caret-left\endcsname}}
+\expandafter\def\csname faicon@caret-right\endcsname        {\symbol{"F0DA}}  \def\faCaretRight        {{\FA\csname faicon@caret-right\endcsname}}
+\expandafter\def\csname faicon@columns\endcsname            {\symbol{"F0DB}}  \def\faColumns           {{\FA\csname faicon@columns\endcsname}}
+\expandafter\def\csname faicon@sort\endcsname               {\symbol{"F0DC}}  \def\faSort              {{\FA\csname faicon@sort\endcsname}}
+\expandafter\def\csname faicon@sort-down\endcsname          {\symbol{"F0DD}}  \def\faSortDown          {{\FA\csname faicon@sort-down\endcsname}}
+\expandafter\def\csname faicon@sort-up\endcsname            {\symbol{"F0DE}}  \def\faSortUp            {{\FA\csname faicon@sort-up\endcsname}}
+
+\expandafter\def\csname faicon@envelope-alt\endcsname       {\symbol{"F0E0}}  \def\faEnvelopeAlt       {{\FA\csname faicon@envelope-alt\endcsname}}
+\expandafter\def\csname faicon@linkedin\endcsname           {\symbol{"F0E1}}  \def\faLinkedin          {{\FA\csname faicon@linkedin\endcsname}}
+\expandafter\def\csname faicon@undo\endcsname               {\symbol{"F0E2}}  \def\faUndo              {{\FA\csname faicon@undo\endcsname}}
+\expandafter\def\csname faicon@legal\endcsname              {\symbol{"F0E3}}  \def\faLegal             {{\FA\csname faicon@legal\endcsname}}
+\expandafter\def\csname faicon@dashboard\endcsname          {\symbol{"F0E4}}  \def\faDashboard         {{\FA\csname faicon@dashboard\endcsname}}
+\expandafter\def\csname faicon@comment-alt\endcsname        {\symbol{"F0E5}}  \def\faCommentAlt        {{\FA\csname faicon@comment-alt\endcsname}}
+\expandafter\def\csname faicon@comments-alt\endcsname       {\symbol{"F0E6}}  \def\faCommentsAlt       {{\FA\csname faicon@comments-alt\endcsname}}
+\expandafter\def\csname faicon@bolt\endcsname               {\symbol{"F0E7}}  \def\faBolt              {{\FA\csname faicon@bolt\endcsname}}
+\expandafter\def\csname faicon@sitemap\endcsname            {\symbol{"F0E8}}  \def\faSitemap           {{\FA\csname faicon@sitemap\endcsname}}
+\expandafter\def\csname faicon@umbrella\endcsname           {\symbol{"F0E9}}  \def\faUmbrella          {{\FA\csname faicon@umbrella\endcsname}}
+\expandafter\def\csname faicon@paste\endcsname              {\symbol{"F0EA}}  \def\faPaste             {{\FA\csname faicon@paste\endcsname}}
+\expandafter\def\csname faicon@lightbulb\endcsname          {\symbol{"F0EB}}  \def\faLightbulb         {{\FA\csname faicon@lightbulb\endcsname}}
+\expandafter\def\csname faicon@exchange\endcsname           {\symbol{"F0EC}}  \def\faExchange          {{\FA\csname faicon@exchange\endcsname}}
+\expandafter\def\csname faicon@cloud-download\endcsname     {\symbol{"F0ED}}  \def\faCloudDownload     {{\FA\csname faicon@cloud-download\endcsname}}
+\expandafter\def\csname faicon@cloud-upload\endcsname       {\symbol{"F0EE}}  \def\faCloudUpload       {{\FA\csname faicon@cloud-upload\endcsname}}
+
+\expandafter\def\csname faicon@user-md\endcsname            {\symbol{"F0F0}}  \def\faUserMD            {{\FA\csname faicon@user-md\endcsname}}
+\expandafter\def\csname faicon@stethoscope\endcsname        {\symbol{"F0F1}}  \def\faStethoscope       {{\FA\csname faicon@stethoscope\endcsname}}
+\expandafter\def\csname faicon@suitcase\endcsname           {\symbol{"F0F2}}  \def\faSuitcase          {{\FA\csname faicon@suitcase\endcsname}}
+\expandafter\def\csname faicon@bell-alt\endcsname           {\symbol{"F0F3}}  \def\faBellAlt           {{\FA\csname faicon@bell-alt\endcsname}}
+\expandafter\def\csname faicon@coffee\endcsname             {\symbol{"F0F4}}  \def\faCoffee            {{\FA\csname faicon@coffee\endcsname}}
+\expandafter\def\csname faicon@food\endcsname               {\symbol{"F0F5}}  \def\faFood              {{\FA\csname faicon@food\endcsname}}
+\expandafter\def\csname faicon@file-alt\endcsname           {\symbol{"F0F6}}  \def\faFileAlt           {{\FA\csname faicon@file-alt\endcsname}}
+\expandafter\def\csname faicon@building\endcsname           {\symbol{"F0F7}}  \def\faBuilding          {{\FA\csname faicon@building\endcsname}}
+\expandafter\def\csname faicon@hospital\endcsname           {\symbol{"F0F8}}  \def\faHospital          {{\FA\csname faicon@hospital\endcsname}}
+\expandafter\def\csname faicon@ambulance\endcsname          {\symbol{"F0F9}}  \def\faAmbulance         {{\FA\csname faicon@ambulance\endcsname}}
+\expandafter\def\csname faicon@medical-kit\endcsname        {\symbol{"F0FA}}  \def\faMedicalKit        {{\FA\csname faicon@medical-kit\endcsname}}
+\expandafter\def\csname faicon@fighter-jet\endcsname        {\symbol{"F0FB}}  \def\faFighterJet        {{\FA\csname faicon@fighter-jet\endcsname}}
+\expandafter\def\csname faicon@beer\endcsname               {\symbol{"F0FC}}  \def\faBeer              {{\FA\csname faicon@beer\endcsname}}
+\expandafter\def\csname faicon@hospital-sign\endcsname      {\symbol{"F0FD}}  \def\faHospitalSign      {{\FA\csname faicon@hospital-sign\endcsname}}
+\expandafter\def\csname faicon@medical-sign\endcsname       {\symbol{"F0FE}}  \def\faMedicalSign       {{\FA\csname faicon@medical-sign\endcsname}}% referred to as plus-sign-alt in Font Awesome documentation
+
+\expandafter\def\csname faicon@double-angle-left\endcsname  {\symbol{"F100}}  \def\faDoubleAngleLeft   {{\FA\csname faicon@double-angle-left\endcsname}}
+\expandafter\def\csname faicon@double-angle-right\endcsname {\symbol{"F101}}  \def\faDoubleAngleRight  {{\FA\csname faicon@double-angle-right\endcsname}}
+\expandafter\def\csname faicon@double-angle-up\endcsname    {\symbol{"F102}}  \def\faDoubleAngleUp     {{\FA\csname faicon@double-angle-up\endcsname}}
+\expandafter\def\csname faicon@double-angle-down\endcsname  {\symbol{"F103}}  \def\faDoubleAngleDown   {{\FA\csname faicon@double-angle-down\endcsname}}
+\expandafter\def\csname faicon@angle-left\endcsname         {\symbol{"F104}}  \def\faAngleLeft         {{\FA\csname faicon@angle-left\endcsname}}
+\expandafter\def\csname faicon@angle-right\endcsname        {\symbol{"F105}}  \def\faAngleRight        {{\FA\csname faicon@angle-right\endcsname}}
+\expandafter\def\csname faicon@angle-up\endcsname           {\symbol{"F106}}  \def\faAngleUp           {{\FA\csname faicon@angle-up\endcsname}}
+\expandafter\def\csname faicon@angle-down\endcsname         {\symbol{"F107}}  \def\faAngleDown         {{\FA\csname faicon@angle-down\endcsname}}
+\expandafter\def\csname faicon@desktop\endcsname            {\symbol{"F108}}  \def\faDesktop           {{\FA\csname faicon@desktop\endcsname}}
+\expandafter\def\csname faicon@laptop\endcsname             {\symbol{"F109}}  \def\faLaptop            {{\FA\csname faicon@laptop\endcsname}}
+\expandafter\def\csname faicon@tablet\endcsname             {\symbol{"F10A}}  \def\faTablet            {{\FA\csname faicon@tablet\endcsname}}
+\expandafter\def\csname faicon@mobile-phone\endcsname       {\symbol{"F10B}}  \def\faMobilePhone       {{\FA\csname faicon@mobile-phone\endcsname}}
+\expandafter\def\csname faicon@circle-blank\endcsname       {\symbol{"F10C}}  \def\faCircleBlank       {{\FA\csname faicon@circle-blank\endcsname}}
+\expandafter\def\csname faicon@quote-left\endcsname         {\symbol{"F10D}}  \def\faQuoteLeft         {{\FA\csname faicon@quote-left\endcsname}}
+\expandafter\def\csname faicon@quote-right\endcsname        {\symbol{"F10E}}  \def\faQuoteRight        {{\FA\csname faicon@quote-right\endcsname}}
+
+\expandafter\def\csname faicon@spinner\endcsname            {\symbol{"F110}}  \def\faSpinner           {{\FA\csname faicon@spinner\endcsname}}
+\expandafter\def\csname faicon@circle\endcsname             {\symbol{"F111}}  \def\faCircle            {{\FA\csname faicon@circle\endcsname}}
+\expandafter\def\csname faicon@reply\endcsname              {\symbol{"F112}}  \def\faReply             {{\FA\csname faicon@reply\endcsname}}
+\expandafter\def\csname faicon@github-alt\endcsname         {\symbol{"F113}}  \def\faGithubAlt         {{\FA\csname faicon@github-alt\endcsname}}
+\expandafter\def\csname faicon@folder-open-alt\endcsname    {\symbol{"F114}}  \def\faFolderOpenAlt     {{\FA\csname faicon@folder-open-alt\endcsname}}
+\expandafter\def\csname faicon@folder-close-alt\endcsname   {\symbol{"F115}}  \def\faFolderCloseAlt    {{\FA\csname faicon@folder-close-alt\endcsname}}
+\expandafter\def\csname faicon@expand-alt\endcsname         {\symbol{"F116}}  \def\faExpandAlt         {{\FA\csname faicon@expand-alt\endcsname}}
+\expandafter\def\csname faicon@collapse-alt\endcsname       {\symbol{"F117}}  \def\faCollapseAlt       {{\FA\csname faicon@collapse-alt\endcsname}}
+\expandafter\def\csname faicon@smile\endcsname              {\symbol{"F118}}  \def\faSmile             {{\FA\csname faicon@smile\endcsname}}
+\expandafter\def\csname faicon@frown\endcsname              {\symbol{"F119}}  \def\faFrown             {{\FA\csname faicon@frown\endcsname}}
+\expandafter\def\csname faicon@meh\endcsname                {\symbol{"F11A}}  \def\faMeh               {{\FA\csname faicon@meh\endcsname}}
+\expandafter\def\csname faicon@gamepad\endcsname            {\symbol{"F11B}}  \def\faGamepad           {{\FA\csname faicon@gamepad\endcsname}}
+\expandafter\def\csname faicon@keyboard\endcsname           {\symbol{"F11C}}  \def\faKeyboard          {{\FA\csname faicon@keyboard\endcsname}}
+\expandafter\def\csname faicon@flag-alt\endcsname           {\symbol{"F11D}}  \def\faFlagAlt           {{\FA\csname faicon@flag-alt\endcsname}}
+\expandafter\def\csname faicon@flag-checkered\endcsname     {\symbol{"F11E}}  \def\faFlagCheckered     {{\FA\csname faicon@flag-checkered\endcsname}}
+
+\expandafter\def\csname faicon@terminal\endcsname           {\symbol{"F120}}  \def\faTerminal          {{\FA\csname faicon@terminal\endcsname}}
+\expandafter\def\csname faicon@code\endcsname               {\symbol{"F121}}  \def\faCode              {{\FA\csname faicon@code\endcsname}}
+\expandafter\def\csname faicon@reply-all\endcsname          {\symbol{"F122}}  \def\faReplyAll          {{\FA\csname faicon@reply-all\endcsname}}
+\expandafter\def\csname faicon@star-half-empty\endcsname    {\symbol{"F123}}  \def\faStarHalfEmpty     {{\FA\csname faicon@star-half-empty\endcsname}}
+\expandafter\def\csname faicon@location-arrow\endcsname     {\symbol{"F124}}  \def\faLocationArrow     {{\FA\csname faicon@location-arrow\endcsname}}
+\expandafter\def\csname faicon@crop\endcsname               {\symbol{"F125}}  \def\faCrop              {{\FA\csname faicon@crop\endcsname}}
+\expandafter\def\csname faicon@code-fork\endcsname          {\symbol{"F126}}  \def\faCodeFork          {{\FA\csname faicon@code-fork\endcsname}}
+\expandafter\def\csname faicon@unlink\endcsname             {\symbol{"F127}}  \def\faUnlink            {{\FA\csname faicon@unlink\endcsname}}
+\expandafter\def\csname faicon@question\endcsname           {\symbol{"F128}}  \def\faQuestion          {{\FA\csname faicon@question\endcsname}}
+\expandafter\def\csname faicon@info\endcsname               {\symbol{"F129}}  \def\faInfo              {{\FA\csname faicon@info\endcsname}}
+\expandafter\def\csname faicon@exclamation\endcsname        {\symbol{"F12A}}  \def\faExclamation       {{\FA\csname faicon@exclamation\endcsname}}
+\expandafter\def\csname faicon@superscript\endcsname        {\symbol{"F12B}}  \def\faSuperscript       {{\FA\csname faicon@superscript\endcsname}}
+\expandafter\def\csname faicon@subscript\endcsname          {\symbol{"F12C}}  \def\faSubscript         {{\FA\csname faicon@subscript\endcsname}}
+\expandafter\def\csname faicon@eraser\endcsname             {\symbol{"F12D}}  \def\faEraser            {{\FA\csname faicon@eraser\endcsname}}
+\expandafter\def\csname faicon@puzzle-piece\endcsname       {\symbol{"F12E}}  \def\faPuzzlePiece       {{\FA\csname faicon@puzzle-piece\endcsname}}
+
+\expandafter\def\csname faicon@microphone\endcsname         {\symbol{"F130}}  \def\faMicrophone        {{\FA\csname faicon@microphone\endcsname}}
+\expandafter\def\csname faicon@microphone-off\endcsname     {\symbol{"F131}}  \def\faMicrophoneOff     {{\FA\csname faicon@microphone-off\endcsname}}
+\expandafter\def\csname faicon@shield\endcsname             {\symbol{"F132}}  \def\faShield            {{\FA\csname faicon@shield\endcsname}}
+\expandafter\def\csname faicon@calendar-empty\endcsname     {\symbol{"F133}}  \def\faCalendarEmpty     {{\FA\csname faicon@calendar-empty\endcsname}}
+\expandafter\def\csname faicon@fire-extinguisher\endcsname  {\symbol{"F134}}  \def\faFireExtinguisher  {{\FA\csname faicon@fire-extinguisher\endcsname}}
+\expandafter\def\csname faicon@rocket\endcsname             {\symbol{"F135}}  \def\faRocket            {{\FA\csname faicon@rocket\endcsname}}
+\expandafter\def\csname faicon@maxcdn\endcsname             {\symbol{"F136}}  \def\faMaxCDN            {{\FA\csname faicon@maxcdn\endcsname}}
+\expandafter\def\csname faicon@chevron-sign-left\endcsname  {\symbol{"F137}}  \def\faChevronSignLeft   {{\FA\csname faicon@chevron-sign-left\endcsname}}
+\expandafter\def\csname faicon@chevron-sign-right\endcsname {\symbol{"F138}}  \def\faChevronSignRight  {{\FA\csname faicon@chevron-sign-right\endcsname}}
+\expandafter\def\csname faicon@chevron-sign-up\endcsname    {\symbol{"F139}}  \def\faChevronSignUp     {{\FA\csname faicon@chevron-sign-up\endcsname}}
+\expandafter\def\csname faicon@chevron-sign-down\endcsname  {\symbol{"F13A}}  \def\faChevronSignDown   {{\FA\csname faicon@chevron-sign-down\endcsname}}
+\expandafter\def\csname faicon@html5\endcsname              {\symbol{"F13B}}  \def\faHTMLfive          {{\FA\csname faicon@html5\endcsname}}
+\expandafter\def\csname faicon@css3\endcsname               {\symbol{"F13C}}  \def\faCSSthree          {{\FA\csname faicon@css3\endcsname}}
+\expandafter\def\csname faicon@anchor\endcsname             {\symbol{"F13D}}  \def\faAnchor            {{\FA\csname faicon@anchor\endcsname}}  
+\expandafter\def\csname faicon@unlock-alt\endcsname         {\symbol{"F13E}}  \def\faUnlockAlt         {{\FA\csname faicon@unlock-alt\endcsname}}
+
+\expandafter\def\csname faicon@bullseye\endcsname           {\symbol{"F140}}  \def\faBullseye          {{\FA\csname faicon@bullseye\endcsname}}
+\expandafter\def\csname faicon@ellipsis-horizontal\endcsname{\symbol{"F141}}  \def\faEllipsisHorizontal{{\FA\csname faicon@ellipsis-horizontal\endcsname}}
+\expandafter\def\csname faicon@ellipsis-vertical\endcsname  {\symbol{"F142}}  \def\faEllipsisVertical  {{\FA\csname faicon@ellipsis-vertical\endcsname}}
+\expandafter\def\csname faicon@rss-sign\endcsname           {\symbol{"F143}}  \def\faRSSSign           {{\FA\csname faicon@rss-sign\endcsname}}
+\expandafter\def\csname faicon@play-sign\endcsname          {\symbol{"F144}}  \def\faPlaySign          {{\FA\csname faicon@play-sign\endcsname}}
+\expandafter\def\csname faicon@ticket\endcsname             {\symbol{"F145}}  \def\faTicket            {{\FA\csname faicon@ticket\endcsname}}
+\expandafter\def\csname faicon@minus-sign-alt\endcsname     {\symbol{"F146}}  \def\faMinusSignAlt      {{\FA\csname faicon@minus-sign-alt\endcsname}}
+\expandafter\def\csname faicon@check-minus\endcsname        {\symbol{"F147}}  \def\faCheckMinus        {{\FA\csname faicon@check-minus\endcsname}}
+\expandafter\def\csname faicon@level-up\endcsname           {\symbol{"F148}}  \def\faLevelUp           {{\FA\csname faicon@level-up\endcsname}}
+\expandafter\def\csname faicon@level-down\endcsname         {\symbol{"F149}}  \def\faLevelDown         {{\FA\csname faicon@level-down\endcsname}}
+\expandafter\def\csname faicon@check-sign\endcsname         {\symbol{"F14A}}  \def\faCheckSign         {{\FA\csname faicon@check-sign\endcsname}}
+\expandafter\def\csname faicon@edit-sign\endcsname          {\symbol{"F14B}}  \def\faEditSign          {{\FA\csname faicon@edit-sign\endcsname}}
+\expandafter\def\csname faicon@external-link-sign\endcsname {\symbol{"F14C}}  \def\faExternalLinkSign  {{\FA\csname faicon@external-link-sign\endcsname}}
+\expandafter\def\csname faicon@share-sign\endcsname         {\symbol{"F14D}}  \def\faShareSign         {{\FA\csname faicon@share-sign\endcsname}}
+
+% aliases
+\expandafter\def\csname faicon@mail-forward\endcsname       {\faShareAlt}     \def\faMailForward       {\faShareAlt}
+\expandafter\def\csname faicon@mail-reply\endcsname         {\faReply}        \def\faMailReply         {\faReply}
+\expandafter\def\csname faicon@mail-reply-all\endcsname     {\faReplyAll}     \def\faMailReplyAll      {\faReplyAll}
+\expandafter\def\csname faicon@star-half-full\endcsname     {\faStarHalfEmpty}\def\faStarHalfFull      {\faStarHalfEmpty}
+\expandafter\def\csname faicon@rotate-left\endcsname        {\faUndo}         \def\faRotateLeft        {\faUndo}
+\expandafter\def\csname faicon@rotate-right\endcsname       {\faRepeat}       \def\faRotateRight       {\faRepeat}
+
+\endinput
+
+
+%% end of file `fontawesome.sty'.
