@@ -1,0 +1,42 @@
+# Copy this file to the Git repository and rename it ".gitignore".
+# Lines starting with '#' are treated as comments.
+
+############################################
+## USER SCRIPTS AND NOTES
+############################################
+
+/*.bat
+/\!*
+
+############################################
+## LATEX TEMPORARY FILES
+############################################
+
+*.log
+*.aux
+*.bbl
+*.blg
+*.tex.undo
+*.tex.bak
+*.~te
+*.$te
+*.DVX
+*.DDF
+*.synctex.gz
+*.synctex.gz(busy)
+*.fdb_latexmk
+*.fls
+*.out
+*.toc
+*.lof
+*.lot
+*.idx
+*.ilg
+*.ind
+
+*.dvi
+*.ps
+
+############################################
+# do not upload commercial fonts
+fonts/Adobe*.otf
