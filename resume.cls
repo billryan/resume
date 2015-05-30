@@ -6,6 +6,8 @@
 \setlength{\parindent}{0pt} 
 % some general improvements, defines the XeTeX logo
 \RequirePackage{xltxtra}                
+% use fontawesome
+\RequirePackage{fontawesome}
 
 \RequirePackage[
 	a4paper,
@@ -22,7 +24,6 @@
 %\setlist{nosep} % removes all vertical spacing within and around the list
 \setlist[itemize]{topsep=0.25em, leftmargin=1.5pc}
 \setlist[enumerate]{topsep=0.25em, leftmargin=1.5pc}
-\RequirePackage{fontawesome}
 \RequirePackage[super]{nth}
 
 \titleformat{\section}         % Customise the \section command 
