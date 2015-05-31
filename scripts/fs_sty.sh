@@ -6,7 +6,6 @@ temp_root='/tmp/fs_script'
 fs_src="${temp_root}/fontawesome"
 
 [ -r "$fs_src" ] && $(rm -rf "$fs_src")
-#[ -d "$fs_src" ] && $(rm -r "$fs_src")
 mkdir -p $fs_src
 
 cp "$script_root/fs_sty.py" "$temp_root"
@@ -17,3 +16,4 @@ cp "${fs_src}/css/font-awesome.css" "${temp_root}/fontawesome.css"
 cp "${fs_src}/fonts/FontAwesome.otf" "${resume_root}/fonts/FontAwesome.otf"
 python "${temp_root}/fs_sty.py" "${temp_root}/fontawesome.css"
 cp "${temp_root}/fontawesome.sty" "${resume_root}"
+cat "${resume_root}/scripts/fontawesome_tail.sty" >> "${resume_root}/fontawesome.sty"

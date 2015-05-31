@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 
+import os
 import re
 from sys import argv
 
@@ -47,17 +48,14 @@ def output_sty(sty, icons):
         for ic in icons:
             prefix = "\expandafter\def\csname faicon@"
             ic_name_h = prefix + ic[0] + "\endcsname"
-            ic_code_tex = "{\symbol{\"" + ic[2] + "}}  \\def\\fa" + ic[1]
+            ic_code_tex = "{\symbol{\"" + ic[1] + "}}  \\def\\fa" + ic[2]
             ic_name_tail = " {{\FA\csname faicon@" + ic[0] + "\endcsname}}\n"
             f.write(ic_name_h.ljust(63) + ic_code_tex.ljust(42) + ic_name_tail)
-    with open(sty, 'a') as f:
-        # tail
-        f.write("\n")
-        f.write("\\endinput\n")
-        f.write("\n\n")
-        f.write(r"%% end of file `fontawesome.sty`.")
 
 
 if __name__ == "__main__":
+    print("output fontawesome.sty...")
     icons = get_icons(css)
-    output_sty("fontawesome.sty", icons)
+    temp_dir = os.path.dirname(css)
+    sty = os.path.join(temp_dir, "fontawesome.sty")
+    output_sty(sty, icons)
