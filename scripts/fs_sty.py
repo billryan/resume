@@ -46,15 +46,16 @@ def output_sty(sty, icons):
     with open(sty, 'a') as f:
         for ic in icons:
             prefix = "\expandafter\def\csname faicon@"
-            ic_name_head = prefix + ic[0] + "\endcsname"
+            ic_name_h = prefix + ic[0] + "\endcsname"
             ic_code_tex = "{\symbol{\"" + ic[2] + "}}  \\def\\fa" + ic[1]
             ic_name_tail = " {{\FA\csname faicon@" + ic[0] + "\endcsname}}\n"
-            f.write(ic_name.ljust(63) + ic_code_tex.ljust(42) + ic_name_tail)
-    # tail
-    f.write("\n")
-    f.write("\\endinput\n")
-    f.write("\n\n")
-    f.write(r"%% end of file `fontawesome.sty`.")
+            f.write(ic_name_h.ljust(63) + ic_code_tex.ljust(42) + ic_name_tail)
+    with open(sty, 'a') as f:
+        # tail
+        f.write("\n")
+        f.write("\\endinput\n")
+        f.write("\n\n")
+        f.write(r"%% end of file `fontawesome.sty`.")
 
 
 if __name__ == "__main__":
