@@ -1,0 +1,34 @@
+%% start of file `fontawesome.sty'.
+%% Original work Copyright 2013 Xavier Danaux (xdanaux@gmail.com).
+%% Modified work Copyright 2014 (adrien+dev@schischi.me)
+%% Modified work Copyright 2015 (yuanbin2014@gmail.com)
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+
+%-------------------------------------------------------------------------------
+%                identification
+%-------------------------------------------------------------------------------
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{fontawesome}[2015/05/31 v4.3.0 font awesome icons]
+
+
+%-------------------------------------------------------------------------------
+%                requirements
+%-------------------------------------------------------------------------------
+\usepackage{fontspec}
+
+
+%-------------------------------------------------------------------------------
+%                implementation
+%-------------------------------------------------------------------------------
+
+% definition of \FA as a shortcut to load the Font Awesome font
+\newfontfamily{\FA}[Path=fonts/, Scale=0.85]{FontAwesome.otf}
+
+% generic command to display an icon by its name
+\newcommand*{\faicon}[1]{%
+  {\FA\csname faicon@#1\endcsname}}
+
