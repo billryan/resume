@@ -25,7 +25,7 @@ Hit branch [master](https://github.com/billryan/resume/tree/master) if you wanna
 
 ## Usage
 
-1. ShareLaTeX 在线编译，麻麻再也不用担心系统和发行版的问题了
+1. ShareLaTeX 在线编译-[resume](https://www.sharelatex.com/templates/556b27cf0d23e5a8117053d9), ** 无需安装诸如 CTeX/TeXlive 等发行版**，麻麻再也不用担心系统和发行版的问题了
 2. 使用较新的 \LaTeX\ 发行版在本地计算机编译
 
 如果确定只需要中文简历的话单独克隆 `zh_CN` 分支即可, 需要注意的是该分支包含 Adobe 的宋楷黑仿四套中文字体，体积较大，如果本地安装有Adobe这四套字体的使用 master 英文模板即可。
@@ -55,6 +55,8 @@ git clone https://github.com/billryan/resume.git --branch zh_CN --depth 1 --sing
 
 其他的可以自行参考相应 cls 和 tex 文件。
 
+=======
+>>>>>>> master
 ## License
 
 [The MIT License (MIT)](http://opensource.org/licenses/MIT)
