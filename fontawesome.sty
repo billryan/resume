@@ -24,8 +24,8 @@
 %-------------------------------------------------------------------------------
 
 % definition of \FA as a shortcut to load the Font Awesome font
-\defaultfontfeatures{Path = fonts/}
-\newfontfamily{\FA}{FontAwesome}
+% http://tex.stackexchange.com/questions/134121/fontawesome-icons-are-getting-too-big-using-xelatex
+\newfontfamily{\FA}[Path=fonts/]{FontAwesome-1000upm}
 
 % generic command to display an icon by its name
 \newcommand*{\faicon}[1]{%
