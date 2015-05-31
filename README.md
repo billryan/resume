@@ -1,5 +1,9 @@
 # Résumé
 
+Hit branch [zh_CN](https://github.com/billryan/resume/tree/zh_CN) if you wanna an Simplified Chinese résumé.
+
+中文用户请前往 [zh_CN](https://github.com/billryan/resume/tree/zh_CN) 分支。
+
 An elegant \LaTeX\ résumé template, compiled with \XeLaTeX. Inspired by 
 
 - [zachscrivena/simple-resume-cv](https://github.com/zachscrivena/simple-resume-cv)
@@ -20,7 +24,7 @@ An elegant \LaTeX\ résumé template, compiled with \XeLaTeX. Inspired by
 1. ShareLaTeX online editor
 2. Compile tex on your Computer
 
-If you only need résumé in English or have installed Adobe Simplified Chinese in your OS, you'd better clone only master branch, since the Chinese fonts files are too large.
+If you only need résumé in English or have installed Adobe Simplified Chinese in your OS, **you'd better clone only master branch,** since the Chinese fonts files are too large.
 
 ```
 git clone https://github.com/billryan/resume.git --branch master --depth 1 --single-branch <folder>

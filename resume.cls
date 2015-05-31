@@ -54,8 +54,12 @@
   \centerline{\Huge{#1}}
   \vspace{1.25ex}
 }
-\newcommand{\contact}[3]{
+\newcommand{\contactInfo}[3]{
   \centerline{\large{\faEnvelopeO\ {#1} \textperiodcentered {{\Large\faMobile}\ {#2}} \textperiodcentered \faLink\ {#3}}}
+  \vspace{1.5ex}
+}
+\newcommand{\basicContactInfo}[3]{
+  \centerline{\large{\faEnvelopeO\ {#1} \textperiodcentered {{\Large\faMobile}\ {#2}}}}
   \vspace{1.5ex}
 }
 \newcommand{\role}[2]{
