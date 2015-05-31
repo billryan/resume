@@ -32,7 +32,7 @@ git clone https://github.com/billryan/resume.git --branch master --depth 1 --sin
 
 ### Sample Output
 
-![resume.png](./resume.png)
+![resume-zh_CN.png](./resume-zh_CN.png)
 
 ## License
 
