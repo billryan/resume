@@ -38,7 +38,6 @@
 *.ps
 
 ############################################
-# do not upload commercial fonts
-fonts/Adobe*.otf
 # do not upload secret infomation
 myresume.tex
+myresume.pdf
