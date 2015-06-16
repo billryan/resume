@@ -55,8 +55,6 @@ git clone https://github.com/billryan/resume.git --branch zh_CN --depth 1 --sing
 
 其他的可以自行参考相应 cls 和 tex 文件。
 
-=======
->>>>>>> master
 ## License
 
 [The MIT License (MIT)](http://opensource.org/licenses/MIT)
