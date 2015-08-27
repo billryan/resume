@@ -76,6 +76,24 @@ xelatex resume-zh_CN.tex % 编译中文简历
 
 对于高级用户：如果系统已确定安装有 Adobe 的四套中文字型，在文档的开始处使用包`zh_CN-Adobefonts_internal`，这样第一次编译时也会很快。
 
+### 参考文献
+
+参考文献的引用采用 bib + bst 的方式管理，bib 中存放 BibTeX 格式的引用文本，bst 用于控制 bib 文件的展示形式，默认为 IEEEtran. 编译方式可选如下：
+
+1. OSX/Linux 用户 `latexmk -pdf -pvc -silent myresume-zh_CN.tex` latexmkrc 配置文件可参考我的 [dotfiles/latexmkrc](https://github.com/billryan/dotfiles/blob/master/latex/latexmkrc)
+2. Windows 用户可使用 WinEdt 中的 TeXify 选项编译(未测试)
+
+除了以上两种编译方式，你还可以使用传统的编译方式：
+
+```shell
+xelatex myresume-zh_CN
+bibtex myresume-zh_CN
+xelatex myresume-zh_CN
+xelatex myresume-zh_CN
+```
+
+范例文档中默认Reference 另起一页，想留在当前页的可注释掉`\newpage`
+
 ### 宏
 
 普通用户直接使用模板中的宏即可，具体排版使用可直接参考范例 tex 文档，已经十分简洁了。
