@@ -3,14 +3,15 @@
 \documentclass{resume}
 %\usepackage{zh_CN-Adobefonts_external} % Simplified Chinese Support using external fonts (./fonts/zh_CN-Adobe/)
 %\usepackage{zh_CN-Adobefonts_internal} % Simplified Chinese Support using system fonts
- 
+
 \begin{document}
 \pagenumbering{gobble} % suppress displaying page number
 
 \name{Bin Yuan}
 
 % {E-mail}{mobilephone}{homepage}
-\contactInfo{xxx@yuanbin.me}{(+86) 131-221-87xxx}{http://www.yuanbin.me}
+% be careful of _ in emaill address
+\contactInfo{\href{mailto:my_address@yuanbin.me}{my\_address@yuanbin.me}}{(+86) 131-221-87xxx}{http://www.yuanbin.me}
 % {E-mail}{mobilephone}
 %\basicContactInfo{xxx@yuanbin.me}{(+86) 131-221-87xxx}
  
@@ -41,11 +42,11 @@ Brief introduction: xxx
 
 \datedsubsection{\textbf{\LaTeX\ résumé template}}{May. 2015 -- Present}
 \role{\LaTeX, Maintainer}{Individual Projects}
-An elegant \LaTeX\ résumé template, https://github.com/billryan/resume
+An elegant \LaTeX\ résumé template, \url{https://github.com/billryan/resume}
 \begin{itemize}
   \item Easy to be further customized or extended
   \item Full support for unicode characters (e.g. CJK) with \XeLaTeX\
-  \item FontAwesome 4.3.0 support
+  \item FontAwesome 4.5.0 support
 \end{itemize}
 
 % Reference Test
@@ -68,8 +69,8 @@ An elegant \LaTeX\ résumé template, https://github.com/billryan/resume
 
 \section{\faInfo\ Miscellaneous}
 \begin{itemize}[parsep=0.5ex]
-  \item Blog: http://your.blog.me
-  \item GitHub: https://github.com/username
+  \item Blog: \url{http://your.blog.me}
+  \item GitHub: \url{https://github.com/username}
   \item Languages: English - Fluent, Mandarin - Native speaker
 \end{itemize}
 

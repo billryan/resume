@@ -17,7 +17,7 @@ An elegant \LaTeX\ résumé template, compiled with \XeLaTeX. Inspired by
 - Easy to be further customized or extended
 - Full support for unicode characters (e.g. CJK) with \XeLaTeX\
 - Perfect Simplified Chinese fonts support with Adobefonts
-- FontAwesome 4.3.0 support (not support alias yet)
+- FontAwesome 4.5.0 support (alias not support yet)
 
 ### Sample Output
 
