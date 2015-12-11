@@ -25,7 +25,7 @@ Hit branch [master](https://github.com/billryan/resume/tree/master) if you wanna
 - 极其容易定制和扩展。
 - 完善的 Unicode 字体支持，因为用的是 XeLaTeX 嘛
 - 完美的简体中文支持，默认使用 adobefonts 的四套简体中文字型，其他字型可自行添加。
-- 支持图标字体 FontAwesome 4.3.0
+- 支持图标字体 FontAwesome 4.5.0
 
 ### 样例输出
  
