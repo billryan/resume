@@ -6,8 +6,6 @@
 \setlength{\parindent}{0pt} 
 % some general improvements, defines the XeTeX logo
 \RequirePackage{xltxtra}                
-% use latex symbol - Mobilefone, Email, ComputerMouse
-\RequirePackage{marvosym}
 % use fontawesome
 \RequirePackage{fontawesome}
 
@@ -57,7 +55,7 @@
   \vspace{1.25ex}
 }
 \newcommand{\contactInfo}[3]{
-  \centerline{\large{\Email\ {#1} \textperiodcentered \Mobilefone\ {#2} \textperiodcentered \ComputerMouse\ {#3}}}
+  \centerline{\large{\faEnvelope\ {#1} \textperiodcentered \faPhone\ {#2} \textperiodcentered \faLink\ {#3}}}
   \vspace{1.5ex}
 }
 \newcommand{\basicContactInfo}[3]{
