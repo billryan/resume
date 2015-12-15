@@ -29,14 +29,18 @@ Hit branch [master](https://github.com/billryan/resume/tree/master) if you wanna
 
 ### 样例输出
  
-![resume-zh_CN.png](./resume-zh_CN.png)
+![English](http://7xojrx.com1.z0.glb.clouddn.com/docs/resume.png)
+![简体中文](http://7xojrx.com1.z0.glb.clouddn.com/docs/resume-zh_CN.png)
+
+- 英文 PDF - http://7xojrx.com1.z0.glb.clouddn.com/docs/resume.pdf
+- 简体中文 PDF - http://7xojrx.com1.z0.glb.clouddn.com/docs/resume-zh_CN.pdf
 
 ## 使用方法
 
 ### ShareLaTeX 在线编译
 
 感谢万能的『云计算』，\LaTeX 编译也可以放到云端了！使用这种方法无需在本机安装诸如 CTeX/TeXlive/MacTeX 等发行版，网站上还能有历史版本记录，十分方便！最简单的方法，浏览器中打开 [模板链接](https://www.sharelatex.com/templates/556b27cf0d23e5a8117053d9), 按需更改自己的名字和联系方式等。
-在线预览时需要注意 ShareLaTeX 自带的 PDF 阅读器对中文支持不太好(可能会显示乱码)，这时选择使用 native 阅读器即可。
+在线预览时需要注意 ShareLaTeX 自带的 PDF 阅读器对中文支持不太好(可能会显示乱码)，这时在编辑界面的左侧菜单选择使用 native 阅读器即可。
 
 中文模板的文件为 `resume-zh_CN.tex`, 英文模板的文件为 `resume.tex`.
 
@@ -53,9 +57,9 @@ xelatex resume-zh_CN.tex % 编译中文简历
 
 \LaTeX 的中文支持一直是不少 TeX 新手心中的梦魇，该简历模板最大的特色就是『无痛』支持中英文双语，『无痛』的含义是指开箱即用——在线或者克隆到本地后只需要更改自己的信息即可，不需要自己设置中文字体支持等操作。
 
-对 Git 不了解或使用不方便的朋友可单独下载压缩包，解压即用。下载地址见 [GitHub 官网](https://github.com/billryan/resume/archive/zh_CN.zip), [大陆镜像加速](http://7rf9g9.com1.z0.glb.clouddn.com/doc/zh_CN.zip)
+对 git 不了解或使用不方便的朋友可单独下载压缩包，解压即用。下载地址见 [GitHub 官网](https://github.com/billryan/resume/archive/zh_CN.zip), [大陆镜像加速](http://7rf9g9.com1.z0.glb.clouddn.com/doc/zh_CN.zip)
 
-对 Git 比较了解的朋友可选择克隆后切换到`zh_CN`分支，`zh_CN` 是`master`分支的超集，即`zh_CN`包含`master`分支所有的文件。
+对 git 比较了解的朋友可选择克隆后切换到`zh_CN`分支，`zh_CN` 是`master`分支的超集，即`zh_CN`包含`master`分支所有的文件。
 需要注意的是`zh_CN`分支包含 Adobe 的宋楷黑仿四套中文字体，体积较大(40 MB+)，如果只需要英文简历的可单独克隆`master`分支。
 
 中文使用UTF-8编码，对于大多数 Windows 用户来说，只要使用的不是太老的 CTeX 发行版，WinEdt 的中文支持也是毫无压力的。
@@ -100,8 +104,7 @@ xelatex myresume-zh_CN
 想自己添加新的宏的可以先看看 [How to write a LaTeX class file and design your own CV (Part 1) - ShareLaTeX](https://www.sharelatex.com/blog/2011/03/27/how-to-write-a-latex-class-file-and-design-your-own-cv.html) 和 [How to write a LaTeX class file and design your own CV (Part 2) - ShareLaTeX](https://www.sharelatex.com/blog/2013/06/28/how-to-write-a-latex-class-file-and-design-your-own-cv.html) 了解下该模板的简单背景。
 
 - `\name`: 姓名
-- `\contactInfo`: 联系信息, 需要三项信息，分别是{邮箱}{手机号}{个人主页}
-- `\basicContactInfo`: 简要的联系信息, 需要 项信息, 分别是{邮箱}{手机号}, 没有个人主页的用这个
+- `\contactInfo`: 联系信息, 需要三项信息，分别是{邮箱}{手机号}{个人主页} 最后一项可以为{}, 但不能去掉括号，否则编译不过
 - `\section`: 用于分节, 如教育背景, 实习/项目经历等
 - `\subsection`: 用于小节标题, 无日期选项
 - `\datedsubsection`: 用于小节标题, 简历中使用最广，第二项为时间区间，自动右对齐
