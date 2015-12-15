@@ -11,11 +11,11 @@
 % use fontawesome
 \RequirePackage{fontawesome}
 % use xcolor for customizing color
-\RequirePackage[usenames,dvipsnames]{xcolor}
+%\RequirePackage[usenames,dvipsnames]{xcolor}
 % loading fonts
 \RequirePackage{fontspec}
 % Main document font
-\setmainfont{texgyretermes}[
+\setmainfont[
   Path = fonts/Main/ ,
   Extension = .otf ,
   UprightFont = *-regular ,
@@ -23,7 +23,7 @@
   ItalicFont = *-italic ,
   BoldItalicFont = *-bolditalic ,
   SmallCapsFont = Fontin-SmallCaps
-]
+]{texgyretermes}
 
 \RequirePackage[
 	a4paper,
