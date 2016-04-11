@@ -1,0 +1,24 @@
+\NeedsTeXFormat{LaTeX2e}[1994/06/01]
+\ProvidesPackage{linespacing_fix}[2015/06/06 linespacing_fix Package]
+
+% fix extra space introduced by setspace
+% http://tex.stackexchange.com/questions/138752/unnecessary-space-after-endspacing
+\RequirePackage{setspace}
+%% insert the following material in preamble
+\RequirePackage{calc}
+\newlength\modparskip
+\newlength\modbaselineskip
+  \def\baselinestretch{1} % this parameter will be redefined at start of 'spacing' environment
+  \setlength\modparskip{\parskip/\real{\baselinestretch}}%
+  \setlength\modbaselineskip{\baselineskip/\real{\baselinestretch}}%
+\makeatletter
+\renewenvironment{spacing}[1]{\par%
+   \def\baselinestretch{#1}%
+   \ifx\@currsize\normalsize\@normalsize\else\@currsize\fi%
+}%
+{\par%
+   \vskip \modparskip%      % originally: \vskip \parskip
+   \vskip \modbaselineskip% % originally: \vskip \baselineskip
+}
+\makeatother
+%% end of material to be inserted in preamble
