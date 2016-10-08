@@ -114,12 +114,8 @@
   \progressbar[heightr=1, width=#1, borderwidth=0pt, roundnessr=0.45, filledcolor=green!40, subdivisions=1]{#3}
 }
 
-\newcommand{\contactInfo}[3]{
-  \centerline{\sffamily\large{\faEnvelope\ {#1} \textperiodcentered\ \faPhone\ {#2}}
-    \ifthenelse{\isempty{#3}}%
-      { } % if {#3} is empty
-      {\textperiodcentered\ \faLink\ {#3} } % homepage, no space before \text...
-  }
+\newcommand{\basicInfo}[1]{
+  \centerline{\sffamily\large{#1}}
   \vspace{1.5ex}
 }
 
