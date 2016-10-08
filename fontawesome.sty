@@ -42,7 +42,11 @@
 \usepackage{fontspec}
 
 % definition of \FA as a shortcut to load the Font Awesome font
-\newfontfamily{\FA}[Path = fonts/fontawesome/opentype/ , Scale = 0.85 , ]{FontAwesome}
+\newfontfamily{\FA}[
+Path = fonts/fontawesome/opentype/ ,
+Scale = 0.85 ,
+SmallCapsFont = *
+]{FontAwesome}
 
 % icon-specific commands
 \input{fontawesomesymbols-xeluatex.tex}
