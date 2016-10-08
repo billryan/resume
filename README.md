@@ -11,6 +11,7 @@ Hit branch [master](https://github.com/billryan/resume/tree/master) if you wanna
 - [zachscrivena/simple-resume-cv](https://github.com/zachscrivena/simple-resume-cv)
 - [res](https://www.ctan.org/pkg/res)
 - [JianXu's CV](http://www.jianxu.net/en/files/JianXu_CV.pdf)
+- [Web Front-End Wenli Zhang.pdf](http://zhangwenli.com/cv/Web%20Front-End%20Wenli%20Zhang.pdf)
 - [paciorek's CV/Resume template](http://www.stat.berkeley.edu/~paciorek/computingTips/Latex_template_creating_CV_.html)
 - [How to write a LaTeX class file and design your own CV (Part 1) - ShareLaTeX](https://www.sharelatex.com/blog/2011/03/27/how-to-write-a-latex-class-file-and-design-your-own-cv.html)
 
@@ -25,14 +26,16 @@ Hit branch [master](https://github.com/billryan/resume/tree/master) if you wanna
 - 极其容易定制和扩展。
 - 完善的 Unicode 字体支持，因为用的是 XeLaTeX 嘛
 - 完美的简体中文支持，默认使用 adobefonts 的四套简体中文字型，其他字型可自行添加。
-- 支持图标字体 FontAwesome 4.5.0
+- 支持图标字体 FontAwesome 4.6.3
 
 ### 样例输出
- 
+
 ![English](http://7xojrx.com1.z0.glb.clouddn.com/docs/resume.png)
+![English with photo](http://7xojrx.com1.z0.glb.clouddn.com/docs/resume_photo.png)
 ![简体中文](http://7xojrx.com1.z0.glb.clouddn.com/docs/resume-zh_CN.png)
 
 - 英文 PDF - http://7xojrx.com1.z0.glb.clouddn.com/docs/resume.pdf
+- 加入照片的英文 PDF - http://7xojrx.com1.z0.glb.clouddn.com/docs/resume_photo.pdf
 - 简体中文 PDF - http://7xojrx.com1.z0.glb.clouddn.com/docs/resume-zh_CN.pdf
 
 ## 使用方法
@@ -42,7 +45,7 @@ Hit branch [master](https://github.com/billryan/resume/tree/master) if you wanna
 感谢万能的『云计算』，\LaTeX 编译也可以放到云端了！使用这种方法无需在本机安装诸如 CTeX/TeXlive/MacTeX 等发行版，网站上还能有历史版本记录，十分方便！最简单的方法，浏览器中打开 [模板链接](https://www.sharelatex.com/templates/556b27cf0d23e5a8117053d9), 按需更改自己的名字和联系方式等。
 在线预览时需要注意 ShareLaTeX 自带的 PDF 阅读器对中文支持不太好(可能会显示乱码)，这时在编辑界面的左侧菜单选择使用 native 阅读器即可。
 
-中文模板的文件为 `resume-zh_CN.tex`, 英文模板的文件为 `resume.tex`.
+中文模板的文件为 `resume-zh_CN.tex`, 英文模板的文件为 `resume.tex`, 带照片的模板文件为 `resume_photo.tex`.
 
 ### 使用较新的 TeX 发行版在本地计算机编译
 
@@ -50,6 +53,7 @@ Hit branch [master](https://github.com/billryan/resume/tree/master) if you wanna
 
 ```
 xelatex resume.tex % 编译英文简历
+xelatex resume_photo.tex % 编译带照片的简历
 xelatex resume-zh_CN.tex % 编译中文简历
 ```
 
@@ -104,7 +108,9 @@ xelatex myresume-zh_CN
 想自己添加新的宏的可以先看看 [How to write a LaTeX class file and design your own CV (Part 1) - ShareLaTeX](https://www.sharelatex.com/blog/2011/03/27/how-to-write-a-latex-class-file-and-design-your-own-cv.html) 和 [How to write a LaTeX class file and design your own CV (Part 2) - ShareLaTeX](https://www.sharelatex.com/blog/2013/06/28/how-to-write-a-latex-class-file-and-design-your-own-cv.html) 了解下该模板的简单背景。
 
 - `\name`: 姓名
-- `\contactInfo`: 联系信息, 需要三项信息，分别是{邮箱}{手机号}{个人主页} 最后一项可以为{}, 但不能去掉括号，否则编译不过
+- `\email`: 邮箱
+- `\linkedin`: LinkedIn
+- `\basicInfo`: 联系信息, 按需加入
 - `\section`: 用于分节, 如教育背景, 实习/项目经历等
 - `\subsection`: 用于小节标题, 无日期选项
 - `\datedsubsection`: 用于小节标题, 简历中使用最广，第二项为时间区间，自动右对齐
@@ -113,7 +119,7 @@ xelatex myresume-zh_CN
 
 ### FontAwesome
 
-首先在 [Font Awesome Icons](http://fortawesome.github.io/Font-Awesome/icons/) 上选中自己想使用的图标(暂不支持 alias)，然后在 [fontawesome.sty](https://github.com/billryan/resume/blob/zh_CN/fontawesome.sty) 中找到相应的宏, 将其作为普通文本一样使用。
+首先在 [Font Awesome Icons](http://fortawesome.github.io/Font-Awesome/icons/) 上选中自己想使用的图标，然后在 [fontawesome.sty](https://github.com/billryan/resume/blob/zh_CN/fontawesome.sty) 中找到相应的宏, 将其作为普通文本一样使用。
 如果不需要使用 FontAwesome 字体的把那些宏去掉即可。
 其他的可以自行参考相应 cls 和 tex 文件。
 
