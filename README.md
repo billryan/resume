@@ -17,14 +17,16 @@ An elegant \LaTeX\ résumé template, compiled with \XeLaTeX. Inspired by
 - Easy to be further customized or extended
 - Full support for unicode characters (e.g. CJK) with \XeLaTeX\
 - Perfect Simplified Chinese fonts support with Adobefonts
-- FontAwesome 4.5.0 support (alias not support yet)
+- FontAwesome 4.6.3 support
 
 ### Sample Output
 
 ![English](http://7xojrx.com1.z0.glb.clouddn.com/docs/resume.png)
+![English with photo](http://7xojrx.com1.z0.glb.clouddn.com/docs/resume_photo.png)
 ![简体中文](http://7xojrx.com1.z0.glb.clouddn.com/docs/resume-zh_CN.png)
 
 - English PDF - http://7xojrx.com1.z0.glb.clouddn.com/docs/resume.pdf
+- English PDF with photo - http://7xojrx.com1.z0.glb.clouddn.com/docs/resume_photo.pdf
 - 简体中文 PDF - http://7xojrx.com1.z0.glb.clouddn.com/docs/resume-zh_CN.pdf
 
 ## Usage
