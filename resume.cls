@@ -8,6 +8,12 @@
 \RequirePackage{xltxtra}
 % use xifthen
 \RequirePackage{xifthen}
+% use progress bar for skill
+\RequirePackage{progressbar}
+% use hyperlink for email and url
+\RequirePackage{hyperref}
+\RequirePackage{url}
+\urlstyle{tt}
 % use fontawesome
 \RequirePackage{fontawesome}
 % use xcolor for customizing color
@@ -71,12 +77,45 @@
   \vspace{1.25ex}
 }
 
-\newcommand{\contactInfo}[3]{
-  \centerline{\sffamily\large{\faEnvelope\ {#1} \textperiodcentered\ \faPhone\ {#2}}
-    \ifthenelse{\isempty{#3}}%
-      { } % if {#3} is empty
-      {\textperiodcentered\ \faLink\ {#3} } % homepage, no space before \text...
-  }
+% defines one's name
+% usage: \name{<name>}
+\newcommand{\nameTest}[1]{
+  {\large\scshape{#1}}
+}
+
+% defines one's email
+% usage: \email{<email>}
+\newcommand{\email}[1]{\faEnvelope\ \href{mailto:#1}{#1}}
+% defines one's phone
+% usage: \phone{<phone>}
+\newcommand{\phone}[1]{\faPhone\ {#1}}
+% defines one's linkedin
+% usage: \linkedin{<linkedin>}
+\newcommand{\linkedin}[2][]{\faLinkedin\ 
+  \ifthenelse{\isempty{#1}}%
+    {\href{#2}{#2}}
+    {\href{#2}{#1}}}
+% defines one's GitHub
+% usage: \github{<github>}
+\newcommand{\github}[2][]{\faGithub\ 
+  \ifthenelse{\isempty{#1}}%
+    {\href{#2}{#2}}
+    {\href{#2}{#1}}}
+% defines one's homepage
+% usage: \homepage{<homepage>}
+\newcommand{\homepage}[2][]{\faLink\ 
+  \ifthenelse{\isempty{#1}}%
+    {\href{#2}{#2}}
+    {\href{#2}{#1}}}
+
+% defines progress bar with text
+% usage: \pbar[3][width]{Text}{percentage}
+\newcommand{\pbar}[3][10em]{{#2}\ 
+  \progressbar[heightr=1, width=#1, borderwidth=0pt, roundnessr=0.45, filledcolor=green!40, subdivisions=1]{#3}
+}
+
+\newcommand{\basicInfo}[1]{
+  \centerline{\sffamily\large{#1}}
   \vspace{1.5ex}
 }
 
