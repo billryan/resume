@@ -19,15 +19,20 @@ An elegant \LaTeX\ résumé template, compiled with \XeLaTeX. Inspired by
 - Perfect Simplified Chinese fonts supported with Adobefonts
 - FontAwesome 4.6.3 support
 
+## Quick Start
+- Fork this repository
+- Add information about you directly in GitHub
+- Compile TeX file to PDF with [LaTeX.Online](https://latexonline.cc/)
+
 ### Sample Output
+
+- [PDF, English](https://latexonline.cc/compile?git=https://github.com/billryan/resume&target=resume.tex&command=xelatex)
+- [PDF with the photo, English](https://latexonline.cc/compile?git=https://github.com/billryan/resume&target=resume_photo.tex&command=xelatex)
+- [简体中文 PDF](http://7xojrx.com1.z0.glb.clouddn.com/docs/resume-zh_CN.pdf)
 
 ![English](http://7xojrx.com1.z0.glb.clouddn.com/docs/resume.png)
 ![English with photo](http://7xojrx.com1.z0.glb.clouddn.com/docs/resume_photo.png)
 ![简体中文](http://7xojrx.com1.z0.glb.clouddn.com/docs/resume-zh_CN.png)
-
-- English PDF - http://7xojrx.com1.z0.glb.clouddn.com/docs/resume.pdf
-- English PDF with photo - http://7xojrx.com1.z0.glb.clouddn.com/docs/resume_photo.pdf
-- 简体中文 PDF - http://7xojrx.com1.z0.glb.clouddn.com/docs/resume-zh_CN.pdf
 
 ## Usage
 
