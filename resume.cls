@@ -12,6 +12,7 @@
 \RequirePackage{progressbar}
 % use hyperlink for email and url
 \RequirePackage{hyperref}
+\hypersetup{hidelinks}
 \RequirePackage{url}
 \urlstyle{tt}
 % use fontawesome
