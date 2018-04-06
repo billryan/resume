@@ -47,6 +47,10 @@ Hit branch [master](https://github.com/billryan/resume/tree/master) if you wanna
 
 中文模板的文件为 `resume-zh_CN.tex`, 英文模板的文件为 `resume.tex`, 带照片的模板文件为 `resume_photo.tex`.
 
+### latexonline.cc
+
+使用 [LaTeX.Online](https://latexonline.cc/) 在线编译
+
 ### 使用较新的 TeX 发行版在本地计算机编译
 
 除了在线编译外，该模板当然也支持传统的本地编译，从 <https://github.com/billryan/resume/tree/zh_CN> 上克隆下来使用 XeLaTeX 编译即可。
