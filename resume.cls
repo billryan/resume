@@ -8,8 +8,6 @@
 \RequirePackage{xltxtra}
 % use xifthen
 \RequirePackage{xifthen}
-% use progress bar for skill
-\RequirePackage{progressbar}
 % use hyperlink for email and url
 \RequirePackage{hyperref}
 \hypersetup{hidelinks}
@@ -108,12 +106,6 @@
   \ifthenelse{\isempty{#1}}%
     {\href{#2}{#2}}
     {\href{#2}{#1}}}
-
-% defines progress bar with text
-% usage: \pbar[3][width]{Text}{percentage}
-\newcommand{\pbar}[3][10em]{{#2}\ 
-  \progressbar[heightr=1, width=#1, borderwidth=0pt, roundnessr=0.45, filledcolor=green!40, subdivisions=1]{#3}
-}
 
 \newcommand{\basicInfo}[1]{
   \centerline{\sffamily\large{#1}}
