@@ -1,0 +1,31 @@
+\NeedsTeXFormat{LaTeX2e}[1994/06/01]
+\ProvidesPackage{NotoSerifCJKsc_external}[2018/05/20 NotoSerifCJKsc_external Package]
+
+\RequirePackage{fontspec}
+\RequirePackage{xeCJK}
+
+% https://github.com/boathit/CTEX/blob/master/texmf/tex/latex/ctex/fontset/ctex-xecjk-adobefonts.def
+% ctex-xecjk-adobefonts.def: Adobe 的 xeCJK 字体设置，为 Adobe 的四套字体
+% vim:ft=tex
+
+\defaultfontfeatures{Path = fonts/NotoSerifCJKsc/, Mapping=tex-text}
+
+\setCJKmainfont[
+BoldFont=NotoSerifCJKsc-Bold.otf,
+ItalicFont=NotoSerifCJKsc-Regular.otf,
+SmallCapsFont=NotoSerifCJKsc-Bold.otf
+]{NotoSerifCJKsc-Regular.otf}
+\setCJKsansfont{NotoSerifCJKsc-Bold.otf}
+\setCJKmonofont{NotoSerifCJKsc-Regular.otf}
+
+\setCJKfamilyfont{zhsong}{NotoSerifCJKsc-Regular.otf}
+\setCJKfamilyfont{zhhei}{NotoSerifCJKsc-Bold.otf}
+\setCJKfamilyfont{zhfs}{NotoSerifCJKsc-Regular.otf}
+\setCJKfamilyfont{zhkai}{NotoSerifCJKsc-Regular.otf}
+
+\newcommand*{\songti}{\CJKfamily{zhsong}} % 宋体
+\newcommand*{\heiti}{\CJKfamily{zhhei}}   % 黑体
+\newcommand*{\kaishu}{\CJKfamily{zhkai}}  % 楷书
+\newcommand*{\fangsong}{\CJKfamily{zhfs}} % 仿宋
+
+\endinput
