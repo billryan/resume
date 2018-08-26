@@ -1,0 +1,31 @@
+\NeedsTeXFormat{LaTeX2e}[1994/06/01]
+\ProvidesPackage{NotoSansSC_external}[2018/05/20 NotoSansSC_external Package]
+
+\RequirePackage{fontspec}
+\RequirePackage{xeCJK}
+
+% https://github.com/boathit/CTEX/blob/master/texmf/tex/latex/ctex/fontset/ctex-xecjk-adobefonts.def
+% ctex-xecjk-adobefonts.def: Adobe 的 xeCJK 字体设置，为 Adobe 的四套字体
+% vim:ft=tex
+
+\defaultfontfeatures{Path = fonts/NotoSansSC/, Mapping=tex-text}
+
+\setCJKmainfont[
+BoldFont=NotoSansSC-Bold.otf,
+ItalicFont=NotoSansSC-Regular.otf,
+SmallCapsFont=NotoSansSC-Bold.otf
+]{NotoSansSC-Regular.otf}
+\setCJKsansfont{NotoSansSC-Bold.otf}
+\setCJKmonofont{NotoSansSC-Regular.otf}
+
+\setCJKfamilyfont{zhsong}{NotoSansSC-Regular.otf}
+\setCJKfamilyfont{zhhei}{NotoSansSC-Bold.otf}
+\setCJKfamilyfont{zhfs}{NotoSansSC-Regular.otf}
+\setCJKfamilyfont{zhkai}{NotoSansSC-Regular.otf}
+
+\newcommand*{\songti}{\CJKfamily{zhsong}} % 宋体
+\newcommand*{\heiti}{\CJKfamily{zhhei}}   % 黑体
+\newcommand*{\kaishu}{\CJKfamily{zhkai}}  % 楷书
+\newcommand*{\fangsong}{\CJKfamily{zhfs}} % 仿宋
+
+\endinput
