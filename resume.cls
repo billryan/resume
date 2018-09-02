@@ -94,6 +94,10 @@
   \ifthenelse{\isempty{#1}}%
     {\href{#2}{#2}}
     {\href{#2}{#1}}}
+\newcommand{\linkedinsquare}[2][]{\faLinkedinSquare\ 
+  \ifthenelse{\isempty{#1}}%
+    {\href{#2}{#2}}
+    {\href{#2}{#1}}}
 % defines one's GitHub
 % usage: \github{<github>}
 \newcommand{\github}[2][]{\faGithub\ 
