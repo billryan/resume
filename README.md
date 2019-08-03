@@ -30,13 +30,13 @@ Hit branch [master](https://github.com/billryan/resume/tree/master) if you wanna
 
 ### 样例输出
 
-![English](http://7xojrx.com1.z0.glb.clouddn.com/docs/resume.png)
-![English with photo](http://7xojrx.com1.z0.glb.clouddn.com/docs/resume_photo.png)
-![简体中文](http://7xojrx.com1.z0.glb.clouddn.com/docs/resume-zh_CN.png)
+![English](https://user-images.githubusercontent.com/1292567/62409353-3fecfc00-b608-11e9-8e83-84962912c956.png)
+![English with photo](https://user-images.githubusercontent.com/1292567/62409351-3f546580-b608-11e9-9f6d-d232a68c5451.png)
+![简体中文](https://user-images.githubusercontent.com/1292567/62409352-3fecfc00-b608-11e9-8d9e-76243ca3052a.png)
 
-- 英文 PDF - http://7xojrx.com1.z0.glb.clouddn.com/docs/resume.pdf
-- 加入照片的英文 PDF - http://7xojrx.com1.z0.glb.clouddn.com/docs/resume_photo.pdf
-- 简体中文 PDF - http://7xojrx.com1.z0.glb.clouddn.com/docs/resume-zh_CN.pdf
+- [英文 PDF](https://github.com/billryan/resume/files/3463503/resume.pdf)
+- [加入照片的英文 PDF](https://github.com/billryan/resume/files/3463501/resume_photo.pdf)
+- [简体中文 PDF](https://github.com/billryan/resume/files/3463502/resume-zh_CN.pdf)
 
 ## 使用方法
 
