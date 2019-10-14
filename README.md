@@ -23,6 +23,7 @@ An elegant \LaTeX\ résumé template, compiled with \XeLaTeX. Inspired by
 - Fork this repository
 - Add information about you directly in GitHub
 - Compile TeX file to PDF with [LaTeX.Online](https://latexonline.cc/)
+- Can also use Overleaf for online compilation (https://www.overleaf.com/)
 
 ### Sample Output
 
