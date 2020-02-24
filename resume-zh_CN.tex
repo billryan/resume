@@ -13,48 +13,37 @@
 \begin{document}
 \pagenumbering{gobble} % suppress displaying page number
 
-\name{你的大名}
+\name{李佳佳}
 
 \basicInfo{
-  \email{yuanbin2014@gmail.com} \textperiodcentered\ 
-  \phone{(+86) 131-221-87xxx} \textperiodcentered\ 
-  \linkedin[billryan8]{https://www.linkedin.com/in/billryan8}}
+  \email{1814059211@qq.com} \textperiodcentered\ 
+  \phone{(+86) 178-631-08918} \textperiodcentered\ 
+  \github[sherlklee]{https://github.com/sherlklee}}
  
 \section{\faGraduationCap\  教育背景}
-\datedsubsection{\textbf{上海交通大学}, 上海}{2013 -- 至今}
-\textit{在读硕士研究生}\ 信息与通信工程, 预计 2016 年 3 月毕业
-\datedsubsection{\textbf{西安电子科技大学}, 西安, 陕西}{2009 -- 2013}
-\textit{学士}\ 通信工程
+\datedsubsection{\textbf{哈尔滨工业大学}, 威海}{2016 -- 至今}
+\textit{在读本科生}\ 计算机科学与技术, 预计 2020 年 6 月毕业
 
-\section{\faUsers\ 实习/项目经历}
-\datedsubsection{\textbf{黑科技公司} 上海}{2015年3月 -- 2015年5月}
-\role{实习}{经理: 高富帅}
-xxx后端开发
-\begin{itemize}
-  \item 实现了 xxx 特性
-  \item 后台资源占用率减少8\%
-  \item xxx
-\end{itemize}
+\section{\faUsers\ 项目经历}
 
-\datedsubsection{\textbf{分布式科学上网姿势}}{2014年6月 -- 至今}
-\role{Golang, Linux}{个人项目，和富帅糕合作开发}
+\datedsubsection{\textbf{基于深度学习的声纹识别的设计与实现}}{2019年12月 -- 至今}
+\role{Python }{毕设(进行中)}
 \begin{onehalfspacing}
-分布式负载均衡科学上网姿势, https://github.com/cyfdecyf/cow
+实现基于深度学习的声纹识别系统
 \begin{itemize}
-  \item 修复了连接未正常关闭导致文件描述符耗尽的 bug
-  \item 使用Chord 哈希 URL, 实现稳定可靠地分流
-  \item xxx (尽量使用量化的客观结果)
+  \item 训练阶段：从语句提取合适的内在表示形式。DNN经过训练，可以在帧级别对说话人进行分类；
+  \item 注册阶段：说话人提供少量的语句，然后用训练过的模型提取特征，获取对应的d-vector。最常见的做法是对少量语句的特征求均值，得到说话人对应的特征向量；
+  \item 评估阶段：网络输出是的d-vector，然后用一种算法来评估数据库的已有向量，当与某个向量相似度足够大，就可以认为验证成功。
 \end{itemize}
 \end{onehalfspacing}
 
-\datedsubsection{\textbf{\LaTeX\ 简历模板}}{2015 年5月 -- 至今}
-\role{\LaTeX, Python}{个人项目}
+\datedsubsection{\textbf{AMY瑜伽馆项目}}{2019 年3月 -- 2019 年5月}
+\role{Django, Python}{团队项目}
 \begin{onehalfspacing}
-优雅的 \LaTeX\ 简历模板, https://github.com/billryan/resume
+实现一个瑜伽馆的网站，功能包括主页展示、课程的发布购买、课程预约等。
 \begin{itemize}
-  \item 容易定制和扩展
-  \item 完善的 Unicode 字体支持，使用 \XeLaTeX\ 编译
-  \item 支持 FontAwesome 4.5.0
+  \item 基于django框架和Bootstrap框架，利用python、html、js实现前后端开发，并完成云服务器部署。
+  \item 个人工作：需求分析、前端设计与实现、后端开发、负责整体测试。
 \end{itemize}
 \end{onehalfspacing}
 
@@ -68,21 +57,16 @@ xxx后端开发
 \section{\faCogs\ IT 技能}
 % increase linespacing [parsep=0.5ex]
 \begin{itemize}[parsep=0.5ex]
-  \item 编程语言: C == Python > C++ > Java
-  \item 平台: Linux
-  \item 开发: xxx
+  \item 编程语言: Java >= Python == C++ 
+  \item 平台: Windows>Linux
+  \item 脚本语言与数据序列化语言: 熟练使用 Json、Markdown；
 \end{itemize}
-
-\section{\faHeartO\ 获奖情况}
-\datedline{\textit{第一名}, xxx 比赛}{2013 年6 月}
-\datedline{其他奖项}{2015}
 
 \section{\faInfo\ 其他}
 % increase linespacing [parsep=0.5ex]
 \begin{itemize}[parsep=0.5ex]
-  \item 技术博客: http://blog.yours.me
-  \item GitHub: https://github.com/username
-  \item 语言: 英语 - 熟练(TOEFL xxx)
+  \item GitHub: https://github.com/sherlklee
+  \item 语言: 英语 - 熟练(CET4-474)
 \end{itemize}
 
 %% Reference
