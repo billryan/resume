@@ -23,7 +23,7 @@ An elegant \LaTeX\ résumé template, compiled with \XeLaTeX. Inspired by
 - Fork this repository
 - Add information about you directly in GitHub
 - Compile TeX file to PDF with [LaTeX.Online](https://latexonline.cc/)
-- Can also use Overleaf for online compilation (https://www.overleaf.com/)
+- Can also use Overleaf for online compilation with [template](https://www.overleaf.com/latex/templates/bill-ryans-elegant-latex-resume/xcqmhktmzmsw)
 
 ### Sample Output
 
@@ -37,7 +37,7 @@ An elegant \LaTeX\ résumé template, compiled with \XeLaTeX. Inspired by
 
 ## Usage
 
-1. Edit in ShareLaTeX online - <https://www.sharelatex.com/templates/556b27cf0d23e5a8117053d9>, **no TeX software install!**
+1. Edit in Overleaf online Web [template](https://www.overleaf.com/latex/templates/bill-ryans-elegant-latex-resume/xcqmhktmzmsw)
 2. Compile tex on your Computer
 
 If you only need a résumé in English or have installed Adobe Simplified Chinese on your OS, **It would be better to clone only the master branch,** since the Simplified Chinese fonts files are too large.
