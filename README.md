@@ -19,7 +19,7 @@ Hit branch [master](https://github.com/billryan/resume/tree/master) if you wanna
 
 ## 简介
 
-该简历模板使用 \XeLaTeX 编译，无痛支持中文，开箱即用(几乎不需要懂 \LaTeX 语法)，除了本地编译外也可使用 Sharelatex **在线编译**，无需在本机安装 TeX 发行版。
+该简历模板使用 \XeLaTeX 编译，无痛支持中文，开箱即用(几乎不需要懂 \LaTeX 语法)，除了本地编译外也可使用 Overleaf **在线编译**，无需在本机安装 TeX 发行版。
 
 主要的功能如下：
 
@@ -40,10 +40,10 @@ Hit branch [master](https://github.com/billryan/resume/tree/master) if you wanna
 
 ## 使用方法
 
-### ShareLaTeX 在线编译
+### Overleaf 在线编译
 
-感谢万能的『云计算』，\LaTeX 编译也可以放到云端了！使用这种方法无需在本机安装诸如 CTeX/TeXlive/MacTeX 等发行版，网站上还能有历史版本记录，十分方便！最简单的方法，浏览器中打开 [模板链接](https://www.sharelatex.com/templates/556b27cf0d23e5a8117053d9), 按需更改自己的名字和联系方式等。
-在线预览时需要注意 ShareLaTeX 自带的 PDF 阅读器对中文支持不太好(可能会显示乱码)，这时在编辑界面的左侧菜单选择使用 native 阅读器即可。
+感谢万能的『云计算』，\LaTeX 编译也可以放到云端了！使用这种方法无需在本机安装诸如 CTeX/TeXlive/MacTeX 等发行版，网站上还能有历史版本记录，十分方便！最简单的方法，浏览器中打开 [模板链接](https://www.overleaf.com/latex/templates/bill-ryans-elegant-latex-resume/xcqmhktmzmsw), 按需更改自己的名字和联系方式等。
+在线预览时需要注意 Overleaf 自带的 PDF 阅读器对中文支持不太好(可能会显示乱码)，这时在编辑界面的左侧菜单选择使用 native 阅读器即可。
 
 中文模板的文件为 `resume-zh_CN.tex`, 英文模板的文件为 `resume.tex`, 带照片的模板文件为 `resume_photo.tex`.
 
@@ -65,7 +65,7 @@ xelatex resume-zh_CN.tex % 编译中文简历
 
 \LaTeX 的中文支持一直是不少 TeX 新手心中的梦魇，该简历模板最大的特色就是『无痛』支持中英文双语，『无痛』的含义是指开箱即用——在线或者克隆到本地后只需要更改自己的信息即可，不需要自己设置中文字体支持等操作。
 
-对 git 不了解或使用不方便的朋友可单独下载压缩包，解压即用。下载地址见 [GitHub 官网](https://github.com/billryan/resume/archive/zh_CN.zip), [大陆镜像加速](http://7rf9g9.com1.z0.glb.clouddn.com/doc/zh_CN.zip)
+对 git 不了解或使用不方便的朋友可单独下载压缩包，解压即用。下载地址见 [GitHub 官网](https://github.com/billryan/resume/archive/zh_CN.zip), [大陆镜像加速](https://gods.coding.net/p/resume/git)
 
 对 git 比较了解的朋友可选择克隆后切换到`zh_CN`分支，`zh_CN` 是`master`分支的超集，即`zh_CN`包含`master`分支所有的文件。
 需要注意的是`zh_CN`分支包含 Adobe 的宋楷黑仿四套中文字体，体积较大(40 MB+)，如果只需要英文简历的可单独克隆`master`分支。
