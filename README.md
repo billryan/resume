@@ -127,6 +127,12 @@ xelatex myresume-zh_CN
 如果不需要使用 FontAwesome 字体的把那些宏去掉即可。
 其他的可以自行参考相应 cls 和 tex 文件。
 
+### 实践参考
+
+这里列举一下其他同学基于本模板的具体**实践心得**, 大家可以自行参考, 也欢迎<u>提交贡献</u>, 分享你的心得:
+
+- [用 Tex 书写优雅的简历 – Jin’s Blog](https://www.imbajin.com/2018-01-20-%E4%BD%BF%E7%94%A8Tex%E4%B9%A6%E5%86%99%E4%BC%98%E9%9B%85%E7%9A%84%E7%AE%80%E5%8E%86/) (简单介绍tex + 常见样式调整)
+
 ## License
 
 [The MIT License (MIT)](http://opensource.org/licenses/MIT)
