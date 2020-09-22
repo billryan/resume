@@ -24,5 +24,5 @@ jobs:
       - name: Upload pdf
         uses: actions/upload-artifact@v2
         with:
-          name: resume_pdf
+          name: resume_pdf_master
           path: ./resume*.pdf
