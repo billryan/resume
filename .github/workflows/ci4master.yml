@@ -1,4 +1,4 @@
-name: Build resume tex files
+name: Build resume tex files in master
 
 on:
   push:
