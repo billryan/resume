@@ -3,7 +3,7 @@ name: Build resume tex files in zh-CN
 on:
   push:
     branches:
-      - zh-CN
+      - zh_CN
 
 jobs:
   build_latex:
@@ -25,5 +25,5 @@ jobs:
       - name: Upload pdf
         uses: actions/upload-artifact@v2
         with:
-          name: resume_pdf_zh-CN
+          name: resume_pdf_zh_CN
           path: ./resume*.pdf
