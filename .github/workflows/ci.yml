@@ -4,7 +4,7 @@ on:
   push:
     branches:
       - master
-        - zh-CN
+
 jobs:
   build_latex:
     runs-on: ubuntu-latest
