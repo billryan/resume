@@ -11,10 +11,7 @@ jobs:
     steps:
       - name: Set up Git repository
         uses: actions/checkout@v2
-        with:
-          run: |
-            apk add make
-            make
+
       - name: Compile LaTeX document
         uses: xu-cheng/latex-action@v2
         with:
@@ -22,3 +19,4 @@ jobs:
             ./resume.tex
             ./resume_photo.tex
           latexmk_use_xelatex: True
+          post_compile: "latexmk -c"
