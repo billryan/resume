@@ -20,5 +20,4 @@ jobs:
           root_file: |
             ./resume.tex
             ./resume_photo.tex
-            ./resume-zh_CN.tex
           latexmk_use_xelatex: True
