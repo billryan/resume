@@ -1,4 +1,4 @@
-name: Build LaTeX document
+name: Build resume tex files
 
 on:
   push:
@@ -20,3 +20,9 @@ jobs:
             ./resume_photo.tex
           latexmk_use_xelatex: True
           post_compile: "latexmk -c"
+
+      - name: Upload pdf
+        uses: actions/upload-artifact@v2
+        with:
+          name: resume_pdf
+          path: ./resume*.pdf
