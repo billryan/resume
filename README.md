@@ -27,9 +27,9 @@ An elegant \LaTeX\ résumé template, compiled with \XeLaTeX. Inspired by
 
 ### Sample Output
 
-![English](https://user-images.githubusercontent.com/1292567/62409353-3fecfc00-b608-11e9-8e83-84962912c956.png)
-![English with photo](https://user-images.githubusercontent.com/1292567/62409351-3f546580-b608-11e9-9f6d-d232a68c5451.png)
-![简体中文](https://user-images.githubusercontent.com/1292567/62409352-3fecfc00-b608-11e9-8d9e-76243ca3052a.png)
+![English](https://user-images.githubusercontent.com/25968335/131621921-65ab1862-1f56-47ef-9d58-8d5149bec841.png)
+![English with photo](https://user-images.githubusercontent.com/25968335/131621960-1cafb3c2-114b-4e90-8b04-bd9b949a6e9d.png)
+![简体中文](https://user-images.githubusercontent.com/25968335/131621980-c004f2a6-4199-4676-8a97-5d2cb165402f.png)
 
 - [English PDF](https://github.com/billryan/resume/files/3463503/resume.pdf)
 - [English with photo PDF](https://github.com/billryan/resume/files/3463501/resume_photo.pdf)
