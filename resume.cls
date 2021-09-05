@@ -14,14 +14,13 @@
 \RequirePackage{url}
 \urlstyle{tt}
 % use fontawesome
-\RequirePackage{fontawesome}
+\RequirePackage{fontawesome5}
 % use xcolor for customizing color
 %\RequirePackage[usenames,dvipsnames]{xcolor}
 % loading fonts
 \RequirePackage{fontspec}
 % Main document font
 \setmainfont[
-  Path = fonts/Main/ ,
   Extension = .otf ,
   UprightFont = *-regular ,
   BoldFont = *-bold ,
