@@ -123,7 +123,7 @@ xelatex myresume-zh_CN
 
 ### FontAwesome
 
-首先在 [Font Awesome Icons](http://fortawesome.github.io/Font-Awesome/icons/) 上选中自己想使用的图标，然后在 [fontawesomesymbols-generic.tex](https://github.com/billryan/resume/blob/zh_CN/fontawesomesymbols-generic.tex) 中找到相应的宏, 将其作为普通文本一样使用。
+首先在 [Font Awesome Icons](https://fontawesome.com/icons) 上选中自己想使用的图标，然后在 [fontawesomesymbols-generic.tex](https://github.com/billryan/resume/blob/zh_CN/fontawesomesymbols-generic.tex) 中找到相应的宏, 将其作为普通文本一样使用。
 如果不需要使用 FontAwesome 字体的把那些宏去掉即可。
 其他的可以自行参考相应 cls 和 tex 文件。
 
