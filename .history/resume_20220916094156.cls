@@ -47,12 +47,6 @@
 \setlist[enumerate]{topsep=0.25em, leftmargin=1.5pc}
 \RequirePackage[super]{nth}
 
-\RequirePackage{xparse}
-\RequirePackage{multirow}
-\RequirePackage{array}
-\RequirePackage{setspace}
-
-
 \titleformat{\section}         % Customise the \section command 
   {\Large\scshape\raggedright} % Make the \section headers large (\Large),
                                % small capitals (\scshape) and left aligned (\raggedright)
@@ -101,19 +95,8 @@
     {\href{#2}{#2}}
     {\href{#2}{#1}}}
 
-% \href 为超链接命令,包含在包hyperref中
-% \ifthenelse{判断条件}{肯定结构}{否定结构}
+\newcommand{\}[][]{}
 
-\newcommand{\birthday}[2][]{\faBirthdayCake\
-  \ifthenelse{\isempty{#1}}
-  {\href{#2}{#2}}
-  {\href{#2}{#1}}
-}
-\newcommand{\home}[2][]{\faHome\
-  \ifthenelse{\isempty{#1}}
-  {\href{#2}{#2}}
-  {\href{#2}{#1}}
-}
 
 \newcommand{\linkedinsquare}[2][]{\faLinkedinSquare\ 
   \ifthenelse{\isempty{#1}}%
@@ -140,33 +123,4 @@
 \newcommand{\role}[2]{
   {\par \textit{#1} ~ #2 \par}
   \vspace{0.85ex}
-}
-
-% 新建长度命令
-\newlength{\leftcolwidth}
-\newlength{\rightcolwidth}
-% 设定长度值
-\setlength{\leftcolwidth}{6em}
-\setlength{\rightcolwidth}{\dimexpr \textwidth - \leftcolwidth - 4\tabcolsep}
-% 设定列类型参考
-% https://tex.stackexchange.com/questions/312093/error-while-setting-column-width-in-latex-package-array-error-illegal-pream-to
-\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
-\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
-\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
-
-\NewDocumentEnvironment{educations}{}{%
-  \begin{tabular}{ R{\leftcolwidth} | L{\rightcolwidth}}
-}{%
-  \end{tabular}
-}
-
-% Separator (empty space) between two entries
-\newcommand*{\separator}[1]{%
-  \multicolumn{2}{c}{} \\[\dimexpr #1 - 1em]
-}
-% https://mirrors.hit.edu.cn/CTAN/macros/latex/contrib/l3packages/xparse.pdf (Specifying arguments)
-\NewDocumentCommand{\education}{m o m m m m}{
-  %IFValueTF 用于判断第二个可选参数
-    \IfValueTF{#2}{#2}{现在} & \textbf{#3} \textbullet #4 \\*
-    #1 & #5 \textbullet #6 \\
 }

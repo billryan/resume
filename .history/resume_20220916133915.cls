@@ -49,8 +49,6 @@
 
 \RequirePackage{xparse}
 \RequirePackage{multirow}
-\RequirePackage{array}
-\RequirePackage{setspace}
 
 
 \titleformat{\section}         % Customise the \section command 
@@ -142,20 +140,15 @@
   \vspace{0.85ex}
 }
 
-% 新建长度命令
 \newlength{\leftcolwidth}
 \newlength{\rightcolwidth}
-% 设定长度值
+
 \setlength{\leftcolwidth}{6em}
+
 \setlength{\rightcolwidth}{\dimexpr \textwidth - \leftcolwidth - 4\tabcolsep}
-% 设定列类型参考
-% https://tex.stackexchange.com/questions/312093/error-while-setting-column-width-in-latex-package-array-error-illegal-pream-to
-\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
-\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
-\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
 
 \NewDocumentEnvironment{educations}{}{%
-  \begin{tabular}{ R{\leftcolwidth} | L{\rightcolwidth}}
+  \begin{tabular}{R{\leftcolwidth} | L{\rightcolwidth}}
 }{%
   \end{tabular}
 }
@@ -164,9 +157,20 @@
 \newcommand*{\separator}[1]{%
   \multicolumn{2}{c}{} \\[\dimexpr #1 - 1em]
 }
-% https://mirrors.hit.edu.cn/CTAN/macros/latex/contrib/l3packages/xparse.pdf (Specifying arguments)
+
+% \education
+%   {<start-date>}  % #1
+%   [<end-date>]    % #2
+%   {<school>}      % #3
+%   {<department>}  % #4
+%   {<major>}       % #5
+%   {<degree>}      % #6
 \NewDocumentCommand{\education}{m o m m m m}{
-  %IFValueTF 用于判断第二个可选参数
+  \ifdef{\@zh}{%
     \IfValueTF{#2}{#2}{现在} & \textbf{#3} \textbullet #4 \\*
     #1 & #5 \textbullet #6 \\
+  }{%
+    \IfValueTF{#2}{#2}{present} & #4, \textbf{#3} \\*
+    #1 & #6 in #5 \\
+  }
 }

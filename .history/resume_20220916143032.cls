@@ -160,13 +160,12 @@
   \end{tabular}
 }
 
-% Separator (empty space) between two entries
-\newcommand*{\separator}[1]{%
+d\newcommand*{\separator}[1]{%
   \multicolumn{2}{c}{} \\[\dimexpr #1 - 1em]
 }
-% https://mirrors.hit.edu.cn/CTAN/macros/latex/contrib/l3packages/xparse.pdf (Specifying arguments)
+
 \NewDocumentCommand{\education}{m o m m m m}{
-  %IFValueTF 用于判断第二个可选参数
+  %
     \IfValueTF{#2}{#2}{现在} & \textbf{#3} \textbullet #4 \\*
     #1 & #5 \textbullet #6 \\
 }
