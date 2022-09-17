@@ -51,6 +51,9 @@
 \RequirePackage{multirow}
 \RequirePackage{array}
 \RequirePackage{setspace}
+\RequirePackage{longtable}
+\RequirePackage{makecell}  % multirowcell
+
 
 
 \titleformat{\section}         % Customise the \section command 
