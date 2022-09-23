@@ -53,7 +53,7 @@
 \RequirePackage{setspace}
 \RequirePackage{longtable}
 \RequirePackage{makecell}  % multirowcell
-
+\RequirePackage{tikz} 
 
 
 \titleformat{\section}         % Customise the \section command 

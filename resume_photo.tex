@@ -24,9 +24,19 @@
 %   \end{tabu}
 % }
 %=======================================header=============
-\begin{minipage}{\linewidth}
-  	\color{black} \LARGE \textbf{data}\color{black} \vspace*{0.3cm} \\				 	
 
+
+\begin{minipage}{\dimexpr\linewidth-2.5cm-2em}
+  \LARGE \textbf{Data Science} \color{black} \vspace*{0.3cm} \\
+  \small{
+  \begin{tabu}{l l}
+   \birthday[1991-11-24]{https://www.linkedin.com/in/billryan8} & \home[\songti{安徽省桐城市}]{安徽}  \\
+   \email{yuanbin2014@gmail.com}  &\phone{(+86) 15205156682} \\
+  \github[github.com/billryan]{https://github.com/billryan}   & \homepage{}{https://stephen-nju.github.io/} \\
+  \end{tabu}
+  }
+\end{minipage}% minipage 之间不能换行
+\begin{minipage}[]{2.5cm}
     \begin{tikzpicture}%
     \node[circle, text=white, minimum size=2.5cm,
       path picture={\node at (path picture bounding box.center){
@@ -35,9 +45,12 @@
     }]{ };
     \end{tikzpicture}				
 \end{minipage}
+\par{
+	 	\center{\Large \textbf{Data since}\color{black}}\par
+	 }
+\bigskip
 
-
-\section{\faGraduationCap\ Education}
+\section{\texorpdfstring{\faGraduationCap}\ Education}
 % =============================================education=================================
 % \begin{educations}
 %   \education%
@@ -63,7 +76,7 @@
 % \textit{B.S.} in Electronics Engineering (EE)
 
 % =============================================educations============================================
-\section{\faUsers\ Experience}
+\section{\texorpdfstring{\faUsers}\ Experience}
 \datedsubsection{\textbf{FLAG Inc.} California, America}{2012 -- Present}
 \role{Summer Intern}{Manager: xxx}
 Brief introduction: xxx.
@@ -109,7 +122,7 @@ An elegant \LaTeX\ résumé template, https://github.com/billryan/resume
 % \datedline{\textit{\nth{1} Prize}, Award on xxx }{Jun. 2013}
 % \datedline{Other awards}{2015}
 
-\section{\faInfo\ Miscellaneous}
+\section{\texorpdfstring{\faInfo}\ Miscellaneous}
 \begin{itemize}[parsep=0.5ex]
   \item Blog: http://your.blog.me
   \item GitHub: https://github.com/username
