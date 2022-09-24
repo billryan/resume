@@ -93,13 +93,13 @@
 
 % defines one's email
 % usage: \email{<email>}
-\newcommand{\email}[1]{\faEnvelope\ \href{mailto:#1}{#1}}
+\newcommand{\email}[1]{\faEnvelope\hspace{0.5em}\href{mailto:#1}{#1}}
 % defines one's phone
 % usage: \phone{<phone>}
-\newcommand{\phone}[1]{\faPhone\ {#1}}
+\newcommand{\phone}[1]{\faPhone\hspace{0.5em}{#1}}
 % defines one's linkedin
 % usage: \linkedin{<linkedin>}
-\newcommand{\linkedin}[2][]{\faLinkedin\ 
+\newcommand{\linkedin}[2][]{\faLinkedin\hspace{0.5em}
   \ifthenelse{\isempty{#1}}%
     {\href{#2}{#2}}
     {\href{#2}{#1}}}
@@ -107,12 +107,12 @@
 % \href 为超链接命令,包含在包hyperref中
 % \ifthenelse{判断条件}{肯定结构}{否定结构}
 
-\newcommand{\birthday}[2][]{\faBirthdayCake\
+\newcommand{\birthday}[2][]{\faBirthdayCake\hspace{0.5em}
   \ifthenelse{\isempty{#1}}
   {\href{#2}{#2}}
   {\href{#2}{#1}}
 }
-\newcommand{\home}[2][]{\faHome\
+\newcommand{\home}[2][]{\faHome\hspace{0.5em}
   \ifthenelse{\isempty{#1}}
   {\href{#2}{#2}}
   {\href{#2}{#1}}
@@ -124,13 +124,13 @@
     {\href{#2}{#1}}}
 % defines one's GitHub
 % usage: \github{<github>}
-\newcommand{\github}[2][]{\faGithub\ 
+\newcommand{\github}[2][]{\faGithub\hspace{0.5em}
   \ifthenelse{\isempty{#1}}%
     {\href{#2}{#2}}
     {\href{#2}{#1}}}
 % defines one's homepage
 % usage: \homepage{<homepage>}
-\newcommand{\homepage}[2][]{\faLink\ 
+\newcommand{\homepage}[2][]{\faLink\hspace{0.5em}
   \ifthenelse{\isempty{#1}}%
     {\href{#2}{#2}}
     {\href{#2}{#1}}}
