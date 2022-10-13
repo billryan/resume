@@ -7,71 +7,72 @@
 \begin{document}
 \pagenumbering{gobble} % suppress displaying page number
 
-\name{Bin Yuan}
+\name{Yi Xu}
 
 \basicInfo{
-  \email{yuanbin2014@gmail.com} \textperiodcentered\ 
-  \phone{(+86) 131-221-87xxx} \textperiodcentered\ 
-  \linkedin[billryan8]{https://www.linkedin.com/in/billryan8}}
+  \email{xuyi18@mails.tsinghua.edu.cn} \textperiodcentered\ 
+  \phone{(+86) 138-1397-8515}}
+  %\linkedin[billryan8]{https://www.linkedin.com/in/billryan8}}
 
-\section{\faGraduationCap\ Education}
-\datedsubsection{\textbf{Shanghai Jiao Tong University (SJTU)}, Shanghai, China}{2013 -- Present}
-\textit{Master student} in Electronics Engineering (EE), expected March 2016
-\datedsubsection{\textbf{Xidian University}, Shaanxi, China}{2009 -- 2013}
-\textit{B.S.} in Electronics Engineering (EE)
+\section{Education}
+\datedsubsection{\textbf{Tsinghua University}, Beijing, China}{2018 -- Present}
+\textit{Undergraduate student} in Department of Computer Science and Technology (CST)
 
-\section{\faUsers\ Experience}
-\datedsubsection{\textbf{FLAG Inc.} California, America}{2012 -- Present}
-\role{Summer Intern}{Manager: xxx}
-Brief introduction: xxx.
+\section{Experience}
+\datedsubsection{\textbf{Taichi Graphics Technology, Inc.}}{Beijing, China}
+\datedsubsection{Research and Development Intern}{2021.04 -- Present}
 \begin{itemize}
-  \item Implemented xxx feature
-  \item Optimized xxx 5\%
-  \item xxx
+  \item Add mesh support for Taichi (MeshTaichi), with 1.4x to 6x speedup compared to state-of-the-art mesh data structures and compilers.
+  \item Implement a real-time invertible FEM.
+  \item Implement a real-time cloth simulation with self-collision.
 \end{itemize}
 
-\datedsubsection{\textbf{xxx Projects}}{Jan. 2015 -- Present}
-\role{C, Python, Django, Linux}{Individual Projects, collaborated with xxx}
-Brief introduction: xxx
+\section{Projects}
+
+\subsection{\textbf{MeshTaichi: A Compiler for Efficient Mesh-based Operations}}
 \begin{itemize}
-  \item Implemented xxx feature
-  \item Optimized xxx 5\%
-  \item xxx
+  \item Propose Meshtaichi, a novel mesh compiler that provides an intuitive programming model to handle mesh-based operations efficiently.
+        Meshtaichi provides a user-friendly syntax and achieves a consistant speedup ranging from 1.4x to 6x over compared to state-of-the-art systems.
+  \item Implement several mesh-based applications as comparison experiments in different systems, including Taichi and CUDA.
+  \item Design and implement a new mesh partitioning strategy, and improves the performance by approximately 20\% for tetrahedron mesh.
 \end{itemize}
 
-\datedsubsection{\textbf{\LaTeX\ résumé template}}{May. 2015 -- Present}
-\role{\LaTeX, Maintainer}{Individual Projects}
-An elegant \LaTeX\ résumé template, https://github.com/billryan/resume
+\subsection{\textbf{GAMES 201 project: Physically-base simulation}}
 \begin{itemize}
-  \item Easy to be further customized or extended
-  \item Full support for unicode characters (e.g. CJK) with \XeLaTeX\
-  \item FontAwesome 4.5.0 support
+  \item Reproduce MLS-MPM with CPIC (Hu 2018), a MPM two-way coupling with rigid bodies.
 \end{itemize}
 
-% Reference Test
-%\datedsubsection{\textbf{Paper Title\cite{zaharia2012resilient}}}{May. 2015}
-%An xxx optimized for xxx\cite{verma2015large}
-%\begin{itemize}
-%  \item main contribution
-%\end{itemize}
-
-\section{\faCogs\ Skills}
-\begin{itemize}[parsep=0.5ex]
-  \item Programming Languages: C == Python > C++ > Java
-  \item Platform: Linux
-  \item Development: Web, xxx
+\subsection{\textbf{Physically-based rendering}}
+\begin{itemize}
+  \item Implement Monte Carlo Path Tracing and SPPM.
 \end{itemize}
 
-\section{\faHeartO\ Honors and Awards}
-\datedline{\textit{\nth{1} Prize}, Award on xxx }{Jun. 2013}
-\datedline{Other awards}{2015}
-
-\section{\faInfo\ Miscellaneous}
-\begin{itemize}[parsep=0.5ex]
-  \item Blog: http://your.blog.me
-  \item GitHub: https://github.com/username
-  \item Languages: English - Fluent, Mandarin - Native speaker
+\section{Awards}
+\begin{itemize}
+  \item Gold Prize, National Olympiad in Infomatics (NOI)\hfill 2016
+  \item Scholarship of Academic Excellence (top 20\%)\hfill 2021
 \end{itemize}
+
+\section{Publications}
+\begin{itemize}
+  \item Chang Yu*, \textbf{Yi Xu}* (*joint first authors), Ye Kuang, Yuanming Hu, Tiantian Liu   
+  ``MeshTaichi: A Compiler for Efficient Mesh-based Operations'', 
+  \textbf{ACM Transactions on Graphics [Proceedings of SIGGRAPH Asia], 2022}.
+
+	
+  \item Tianhui Shi, Mingshu Zhai, \textbf{Yi Xu}, Jidong Zhai, 
+  ``GraphPi: High Performance Graph Pattern Matching through Effective Redundancy Elimination'', 
+  \textbf{SC'20}.
+  \begin{itemize}
+	\item Implement a multi-machine version of GraphPi, scaling up to 1024 computing nodes.
+  %(24576 processor cores)
+  \end{itemize}
+\end{itemize}
+
+\section{Skills}
+\textbf{Programming Languages:} \small C/C++, Python, CUDA (ranked by proficiency)
+
+\textbf{Languages:} \small Mandarin Chinese (Native speaker), English (TOEFL 107), Japanese (JLPT N1)
 
 %% Reference
 %\newpage
