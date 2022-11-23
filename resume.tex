@@ -22,34 +22,46 @@
 \datedsubsection{\textbf{Taichi Graphics Technology, Inc.}}{Beijing, China}
 \datedsubsection{Research and Development Intern}{2021.04 -- Present}
 \begin{itemize}
-  \item Add mesh support for Taichi (MeshTaichi), with 1.4x to 6x speedup compared to state-of-the-art mesh data structures and compilers.
-  \item Implement a real-time invertible FEM.
-  \item Implement a real-time cloth simulation with self-collision.
+  \item Propose and deploy Meshtaichi, with 1.4x to 6x speedup over state-of-the-art systems.
+  %\item Implement a real-time invertible FEM.
+  \item Implement large-scale real-time simulations including cloth with self-collision and invertible FEM.
 \end{itemize}
 
 \section{Projects}
 
 \subsection{\textbf{MeshTaichi: A Compiler for Efficient Mesh-based Operations}}
 \begin{itemize}
-  \item Propose Meshtaichi, a novel mesh compiler that provides an intuitive programming model to handle mesh-based operations efficiently.
-        Meshtaichi provides a user-friendly syntax and achieves a consistant speedup ranging from 1.4x to 6x over compared to state-of-the-art systems.
-  \item Implement several mesh-based applications as comparison experiments in different systems, including Taichi and CUDA.
-  \item Design and implement a new mesh partitioning strategy, and improves the performance by approximately 20\% for tetrahedron mesh.
+  %\item Publish Meshtaichi in SIGGRAPH Asia 2022 as joint first author.
+        %Meshtaichi provides a user-friendly syntax and achieves a consistant speedup ranging from 1.4x to 6x over compared to state-of-the-art systems.
+  \item Further Exploit data locality and utilize on-chip memory by partitioning meshes into smaller patches, where our compiler takes over the caching scheme and reduces attribute IO overhead.
+  \item Conduct a through evaluation of our system by comparing with other languages, including CUDA and Taichi, in several mesh-based applications.
+  %several mesh-based applications as comparison experiments in different systems, including Taichi and CUDA.
+  \item Propose a new mesh partitioning strategy, and improves the performance by 20\% for tetrahedron mesh by reducing ribbon elements shared by multiple patches.
 \end{itemize}
 
-\subsection{\textbf{GAMES 201 project: Physically-base simulation}}
+\subsection{\textbf{Real-time physically-based simulations on mesh}}
 \begin{itemize}
-  \item Reproduce MLS-MPM with CPIC (Hu 2018), a MPM two-way coupling with rigid bodies.
+  \item Implement a real-time cloth simultion with the repulsion method for cloth self collisions (Wang 2021), quadratic bending model and SDF fields.
+        Runs at 50 fps with 30k vertices on RTX 2060.
+  \item Implement a invertible finite elements based on Projective Dynamics as a Meshtaichi testcase, able to handle extremely large deformations.
+        Runs at 34 fps with 200k vertices on RTX 3090.
+
+\end{itemize}
+
+\subsection{\textbf{GAMES 201 course project: MPM}}
+\begin{itemize}
+  \item Reproduce CPIC (Hu 2018), supporting two-way coupling with rigid bodies and material cutting.
+  \item Couple Neo-hookean FEM lagrangian forces with MPM frame.
 \end{itemize}
 
 \subsection{\textbf{Physically-based rendering}}
 \begin{itemize}
-  \item Implement Monte Carlo Path Tracing and SPPM.
+  \item Implement Monte Carlo Path Tracing and SPPM, with k-d tree acceleration.
 \end{itemize}
 
 \section{Awards}
 \begin{itemize}
-  \item Gold Prize, National Olympiad in Infomatics (NOI)\hfill 2016
+  \item Gold Prize, National Olympiad in Informatics (NOI)\hfill 2016
   \item Scholarship of Academic Excellence (top 20\%)\hfill 2021
 \end{itemize}
 
@@ -63,14 +75,14 @@
   \item Tianhui Shi, Mingshu Zhai, \textbf{Yi Xu}, Jidong Zhai, 
   ``GraphPi: High Performance Graph Pattern Matching through Effective Redundancy Elimination'', 
   \textbf{SC'20}.
-  \begin{itemize}
-	\item Implement a multi-machine version of GraphPi, scaling up to 1024 computing nodes.
+  % \begin{itemize}
+	% \item Implement a multi-machine version of GraphPi, scaling up to 1024 computing nodes.
   %(24576 processor cores)
-  \end{itemize}
+  % \end{itemize}
 \end{itemize}
 
 \section{Skills}
-\textbf{Programming Languages:} \small C/C++, Python, CUDA (ranked by proficiency)
+\textbf{Programming Languages:} \small C/C++, Python, CUDA %(ranked by proficiency)
 
 \textbf{Languages:} \small Mandarin Chinese (Native speaker), English (TOEFL 107), Japanese (JLPT N1)
 
