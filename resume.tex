@@ -15,14 +15,14 @@
   %\linkedin[billryan8]{https://www.linkedin.com/in/billryan8}}
 
 \section{Education}
-\datedsubsection{\textbf{Tsinghua University}, Beijing, China}{2018 -- Present}
-\textit{Undergraduate student} in Department of Computer Science and Technology (CST)
+\datedsubsection{\textbf{Tsinghua University}, Beijing, China}{2018.08 -- 2023.07 (Expected)}
+\textit{Undergraduate student} in the Department of Computer Science and Technology (CST)
 
 \section{Experience}
 \datedsubsection{\textbf{Taichi Graphics Technology, Inc.}}{Beijing, China}
-\datedsubsection{Research and Development Intern}{2021.04 -- Present}
+\datedsubsection{Research and Development Intern}{2021.04 -- 2022.12}
 \begin{itemize}
-  \item Propose and deploy Meshtaichi, with 1.4x to 6x speedup over state-of-the-art systems.
+  \item Propose and implement a new compiler Meshtaichi, with 1.4x to 6x speedup over state-of-the-art systems.
   %\item Implement a real-time invertible FEM.
   \item Implement large-scale real-time simulations including cloth with self-collision and invertible FEM.
 \end{itemize}
@@ -32,26 +32,28 @@
 \subsection{\textbf{MeshTaichi: A Compiler for Efficient Mesh-based Operations}}
 \begin{itemize}
   %\item Publish Meshtaichi in SIGGRAPH Asia 2022 as joint first author.
-        %Meshtaichi provides a user-friendly syntax and achieves a consistant speedup ranging from 1.4x to 6x over compared to state-of-the-art systems.
-  \item Further Exploit data locality and utilize on-chip memory by partitioning meshes into smaller patches, where our compiler takes over the caching scheme and reduces attribute IO overhead.
-  \item Conduct a through evaluation of our system by comparing with other languages, including CUDA and Taichi, in several mesh-based applications.
+        %Meshtaichi provides a user-friendly syntax and achieves a consistent speedup ranging from 1.4x to 6x over compared to state-of-the-art systems.
+  % \item Further exploit data locality and utilize on-chip memory by partitioning meshes into smaller patches, where our compiler takes over the caching scheme and reduces attribute IO overhead.
+  \item Propose a new compiler with high efficiency and productivity by automatically partitioning meshes into smaller patches and caching attributes in every patch to reduce IO overhead.
+  \item Implement a frontend with intuitive syntax, Intermediate Representations for further IO optimization, and automatic parallelized execution for multiple backends including CPU and CUDA.
+  \item Write tests in CUDA, Taichi, C++, and other domain-specific languages to compare our system with others in several mesh-based applications of physically-based simulation and geometry processing.
   %several mesh-based applications as comparison experiments in different systems, including Taichi and CUDA.
-  \item Propose a new mesh partitioning strategy, and improves the performance by 20\% for tetrahedron mesh by reducing ribbon elements shared by multiple patches.
+  % \item Propose a new mesh partitioning strategy and improves the performance by 20\% for tetrahedron mesh by reducing ribbon elements shared by multiple patches.
 \end{itemize}
 
 \subsection{\textbf{Real-time physically-based simulations on mesh}}
 \begin{itemize}
-  \item Implement a real-time cloth simultion with the repulsion method for cloth self collisions (Wang 2021), quadratic bending model and SDF fields.
-        Runs at 50 fps with 30k vertices on RTX 2060.
-  \item Implement a invertible finite elements based on Projective Dynamics as a Meshtaichi testcase, able to handle extremely large deformations.
-        Runs at 34 fps with 200k vertices on RTX 3090.
+  \item Implement a real-time cloth simulation with the repulsion method for cloth self collisions (Wang 2021), quadratic bending model, and SDF fields.
+        It runs at 50 fps with 30k vertices on RTX 2060.
+  \item Implement invertible finite elements based on Projective Dynamics as a Meshtaichi test case, able to handle extremely large deformations.
+        It runs at 34 fps with 200k vertices on RTX 3090.
 
 \end{itemize}
 
 \subsection{\textbf{GAMES 201 course project: MPM}}
 \begin{itemize}
   \item Reproduce CPIC (Hu 2018), supporting two-way coupling with rigid bodies and material cutting.
-  \item Couple Neo-hookean FEM lagrangian forces with MPM frame.
+  \item Couple Neo-Hookean FEM lagrangian forces with MPM frame.
 \end{itemize}
 
 \subsection{\textbf{Physically-based rendering}}
